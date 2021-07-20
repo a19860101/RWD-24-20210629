@@ -28,6 +28,15 @@ table {
     border-collapse: collapse;
     /* border-spacing: 0px; */
 }
+
+/* img {
+    width: 100%;
+} */
+
+.w-100 {
+    width: 100%;
+}
+
 /* text-align */
 .t-left {
     text-align: left;
