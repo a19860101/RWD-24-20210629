@@ -18,3 +18,14 @@
 .col-10 { flex:0 0 calc(100% / 12 * 10); }
 .col-11 { flex:0 0 calc(100% / 12 * 11); }
 .col-12 { flex:0 0 calc(100% / 12 * 12); }
+
+/* 屬性選取器 */
+[class^="col-"]{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+/* 
+    *= 包含
+    ^= 開頭
+    $= 結尾
+*/
