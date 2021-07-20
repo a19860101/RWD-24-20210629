@@ -28,7 +28,19 @@ table {
     border-collapse: collapse;
     /* border-spacing: 0px; */
 }
-
+/* text-align */
+.t-left {
+    text-align: left;
+}
+.t-center {
+    text-align: center;
+}
+.t-left {
+    text-align: right;
+}
+.t-justify {
+    text-align: justify;
+}
 /* margin */
 .m-0 {
     margin: 0;
