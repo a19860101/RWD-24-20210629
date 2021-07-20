@@ -317,3 +317,45 @@ table {
     padding-top: calc(5 * var(--spacing));
     padding-bottom: calc(5 * var(--spacing));
 }
+/*  display 
+    inline,inline-block,flex,none,block,table, table-cell
+*/
+.d-inline {
+    display: inline;
+}
+.d-block {
+    display: block;
+}
+.d-flex {
+    display: flex;
+}
+.d-none {
+    display: none;
+}
+.d-inline-block {
+    display: inline-block;
+}
+.d-table {
+    display: table;
+}
+.d-table-cell {
+    display: table-cell;
+}
+/*  position
+    static, relative, absolute, fixed, sticky
+*/
+.static {
+    position: static;
+}
+.relative {
+    position: relative;
+}
+.absolute {
+    position: absolute;
+}
+.fixed {
+    position: fixed;
+}
+.sticky {
+    position: sticky;
+}
