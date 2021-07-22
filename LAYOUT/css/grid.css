@@ -48,8 +48,8 @@
 
 /* 屬性選取器 */
 [class^="col"] {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 /* 
     *= 包含

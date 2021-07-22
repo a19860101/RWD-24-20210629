@@ -16,6 +16,7 @@ header .content {
     top: 35%;
     left: 25%;
 }
+/* subscribe */
 #subscribe {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -30,12 +31,12 @@ header .content {
     transform: translateY(-50%);
     font-size: 2.5rem;
 }
-
+/* activity */
 #activity {
     padding-top: 35px;
     padding-bottom: 35px;
 }
-
+/* new */
 #new {
     padding-top: 35px;
     padding-bottom: 35px;
@@ -43,4 +44,15 @@ header .content {
 .badge {
     right: 15px;
     top: 15px;
+}
+/* promotion */
+#promotion  {
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+#promotion img{
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
