@@ -16,3 +16,17 @@ header .content {
     top: 35%;
     left: 25%;
 }
+#subscribe {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+#subscribe a {
+    height: 150px;
+}
+#subscribe span {
+    z-index: 99;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.5rem;
+}
