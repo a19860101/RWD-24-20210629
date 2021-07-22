@@ -95,6 +95,17 @@ table {
 .t-justify {
     text-align: justify;
 }
+.t-underline {text-decoration: underline;}
+.t-overline {text-decoration: overline;}
+.t-none {text-decoration: none;}
+.t-line-through {text-decoration: line-through;}
+
+/* overflow */
+.overflow-hidden {overflow: hidden;}
+.overflow-auto {overflow: auto;}
+.overflow-scroll {overflow: scroll;}
+.overflow-visible {overflow: visible;}
+
 /* border */
 .rounded-lg {border-radius: 15px;}
 .rounded {border-radius: 10px;}

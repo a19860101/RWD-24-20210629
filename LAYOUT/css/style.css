@@ -30,3 +30,8 @@ header .content {
     transform: translateY(-50%);
     font-size: 2.5rem;
 }
+
+#activity {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
