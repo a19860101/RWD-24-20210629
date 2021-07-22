@@ -1,8 +1,18 @@
 /* header */
 
-header {
+header a{
     background-image: url("../images/bg-1.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    padding-top: 400px;
+    padding-bottom: 400px;
+}
+
+header .content {
+    /* background-color: #ccc; */
+    width: 300px;
+    top: 40%;
+    left: 30%;
 }
