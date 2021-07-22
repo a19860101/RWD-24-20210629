@@ -95,6 +95,20 @@ table {
 .t-justify {
     text-align: justify;
 }
+/* border */
+.rounded-lg {border-radius: 15px;}
+.rounded {border-radius: 10px;}
+.rounded-sm {border-radius: 3px;}
+.border-black {border: 1px solid var(--black);}
+.border-blue {border: 1px solid var(--blue);}
+.border-red {border: 1px solid var(--red);}
+.border-green {border: 1px solid var(--green);}
+.border-dark {border: 1px solid var(--dark);}
+.border-light {border: 1px solid var(--light);}
+.border-black {border: 1px solid var(--black);}
+.border-white {border: 1px solid var(--white);}
+.border-gray {border: 1px solid var(--gray);}
+
 /* margin */
 .m-0 {
     margin: 0;
