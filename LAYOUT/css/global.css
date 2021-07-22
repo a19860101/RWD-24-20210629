@@ -8,6 +8,7 @@
     --black: #000;
     --white: #fff;
     --gray: #a0a0a0;
+    font-size: 14px;
 }
 * {
     margin: 0;
