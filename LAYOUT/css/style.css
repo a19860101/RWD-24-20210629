@@ -40,3 +40,7 @@ header .content {
     padding-top: 35px;
     padding-bottom: 35px;
 }
+.badge {
+    right: 15px;
+    top: 15px;
+}
