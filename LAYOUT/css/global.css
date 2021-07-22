@@ -1,5 +1,13 @@
 :root {
     --spacing: 5px;
+    --blue: #087bff;
+    --red: #e7192a;
+    --green: #159153;
+    --dark: #181818;
+    --light: #d1d1d1;
+    --black: #000;
+    --white: #fff;
+    --gray: #a0a0a0;
 }
 * {
     margin: 0;
@@ -36,6 +44,36 @@ table {
 .w-100 {
     width: 100%;
 }
+/* color */
+.t-blue {color: var(--blue);}
+.t-red {color: var(--red);}
+.t-green {color: var(--green);}
+.t-dark {color: var(--dark);}
+.t-light {color: var(--light);}
+.t-black {color: var(--black);}
+.t-white {color: var(--white);}
+.t-gray {color: var(--gray);}
+/* background-color */
+.bg-blue {background-color: var(--blue);}
+.bg-red {background-color: var(--red);}
+.bg-green {background-color: var(--green);}
+.bg-dark {background-color: var(--dark);}
+.bg-light {background-color: var(--light);}
+.bg-black {background-color: var(--black);}
+.bg-white {background-color: var(--white);}
+.bg-gray {background-color: var(--gray);}
+/* font-weight, font-style */
+.t-weight {font-weight: bold;}
+.t-weight-100 {font-weight: 100;}
+.t-weight-200 {font-weight: 200;}
+.t-weight-300 {font-weight: 300;}
+.t-weight-400 {font-weight: 400;}
+.t-weight-500 {font-weight: 500;}
+.t-weight-600 {font-weight: 600;}
+.t-weight-700 {font-weight: 700;}
+.t-weight-800 {font-weight: 800;}
+.t-weight-900 {font-weight: 900;}
+.t-italic {font-style: italic;}
 
 /* text-align */
 .t-left {
