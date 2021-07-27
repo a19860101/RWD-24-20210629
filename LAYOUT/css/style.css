@@ -65,3 +65,14 @@ header .content {
 hr {
     border-bottom:solid 1px var(--light)
 }
+/* about */
+#about {
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+#about img {
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
