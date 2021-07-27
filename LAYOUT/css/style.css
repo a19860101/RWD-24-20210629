@@ -56,3 +56,12 @@ header .content {
     object-fit: cover;
     object-position: center;
 }
+
+/* blog */
+#blog {
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+hr {
+    border-bottom:solid 1px var(--light)
+}
