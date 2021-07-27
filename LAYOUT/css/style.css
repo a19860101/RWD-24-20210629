@@ -68,11 +68,16 @@ hr {
 /* about */
 #about {
     padding-top: 35px;
-    padding-bottom: 35px;
+    padding-bottom: 70px;
 }
 #about img {
     width: 40%;
     height: 100%;
     object-fit: cover;
     object-position: center;
+}
+
+footer {
+    padding-top: 35px;
+    padding-bottom: 35px;
 }
