@@ -39,9 +39,10 @@ table {
     /* border-spacing: 0px; */
 }
 
-/* img {
-    width: 100%;
-} */
+img {
+    /* width: 100%; */
+    vertical-align: top;
+}
 
 .img-cover {
     width: 100%;
