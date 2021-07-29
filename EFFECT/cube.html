@@ -14,12 +14,16 @@
             margin:50% auto;
             transform: translateY(-50%);
         }
-        .cube {
-            transform: rotateX(40deg)rotateY(120deg)rotateZ(80deg);
+        .space .cube {
             transform-style: preserve-3d;
+            transition: 1s ease-in-out;
         }
+        .space:hover .cube {
+            transform: rotateX(240deg)rotateY(120deg)rotateZ(180deg);
+        }
+        
         .plane {
-            opacity: .7;
+            opacity: .8;
         }
         .cube, .plane {
             width: 100%;
