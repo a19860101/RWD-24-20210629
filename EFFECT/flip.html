@@ -11,18 +11,31 @@
             height: 300px;
             border: 1px solid #000;
             position: relative;
+
+            perspective: 600px;
         }
         .front {
             width: 100%;
             height: 100%;
             background-color: #dbff63;
             position: absolute;
+            transition: 1s;
         }
         .back {
             width: 100%;
             height: 100%;
             background-color: #ff798f;
             position: absolute;
+
+            transform: rotateY(180deg);
+            backface-visibility: hidden;
+            transition: 1s;
+        }
+        .card:hover .front {
+            transform: rotateY(180deg);
+        }
+        .card:hover .back {
+            transform: rotateY(360deg);
         }
     </style>
 </head>
