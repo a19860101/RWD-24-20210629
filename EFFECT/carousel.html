@@ -17,10 +17,11 @@
         .space .carousel {
             transform-style: preserve-3d;
             transition: 3s ease-in-out;
+            animation: r 10s;
         }
-        .space:hover .carousel {
+        /* .space:hover .carousel {
             transform:rotateY(360deg);
-        }
+        } */
         
         .plane {
             opacity: 1;
@@ -59,6 +60,21 @@
             height: 100%;
             object-fit: cover;
             object-position: center;
+        }
+        @keyframes r {
+            0% {}
+            8.3%  {transform: rotateY(calc(60deg * 1));}
+            16.6% {transform: rotateY(calc(60deg * 1));}
+            24.9% {transform: rotateY(calc(60deg * 2));}
+            33.2% {transform: rotateY(calc(60deg * 2));}
+            41.5% {transform: rotateY(calc(60deg * 3));}
+            49.8% {transform: rotateY(calc(60deg * 3));}
+            58.1% {transform: rotateY(calc(60deg * 4));}
+            66.4% {transform: rotateY(calc(60deg * 4));}
+            74.7% {transform: rotateY(calc(60deg * 5));}
+            83%   {transform: rotateY(calc(60deg * 5));}
+            91.3% {transform: rotateY(calc(60deg * 6));}
+            100%  {transform: rotateY(calc(60deg * 6));}
         }
     </style>
 </head>
