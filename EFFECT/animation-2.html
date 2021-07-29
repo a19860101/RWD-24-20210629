@@ -11,14 +11,25 @@
             height: 150px;
             background-color: #4983ff;
 
-            animation: move 3s;
+            /* animation: move 3s; */
+            /* animation-name: move; */
+            /* animation-duration: 2s; */
+            /* animation-delay: 0s; */
+            /* animation-fill-mode:forwards; */
+            /* animation-direction: alternate; */
+            /* normal, reverse, alternate, alternate-reverse */
+            /* animation-iteration-count: infinite; */
+
+            animation: move 2s 0s forwards alternate infinite;
+
+            /* animation-play-state: paused; */
         }
         @keyframes move {
             0% {}
-            25% {transform: translate(300px ,0)rotate(90deg);}
-            50% {transform: translate(300px ,300px)rotate(190deg);}
-            75% {transform: translate(0,300px)rotate(270deg);}
-            100% {transform: translate(0,0)rotate(360deg);}
+            33% {transform: translate(300px ,0)rotate(90deg);}
+            66% {transform: translate(300px ,300px)rotate(190deg);}
+            100% {transform: translate(0,300px)rotate(270deg);}
+            /* 100% {transform: translate(0,0)rotate(360deg);} */
         }
     </style>
 </head>
