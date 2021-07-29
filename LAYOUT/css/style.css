@@ -7,6 +7,12 @@ nav {
 nav .logo {
     font-size: 1.8em;
 }
+nav a {
+    transition: .4s;
+}
+nav a:hover {
+    color: gray;
+}
 /* header */
 
 header a{
