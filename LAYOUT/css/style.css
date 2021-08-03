@@ -24,13 +24,22 @@ header a{
     padding-top: 400px;
     padding-bottom: 400px;
 }
-
 header .content {
-    /* background-color: #ccc; */
     width: 400px;
     top: 35%;
-    left: 25%;
+    left: 50%;
+    transform: translateX(-50%);
 }
+@media(min-width: 720px){
+    header .content {
+        /* background-color: #ccc; */
+        width: 400px;
+        top: 35%;
+        left: 25%;
+        transform: translateX(0);
+    }
+}
+
 /* subscribe */
 #subscribe {
     padding-top: 100px;
