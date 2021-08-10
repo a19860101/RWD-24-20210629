@@ -12,14 +12,15 @@
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
         crossorigin="anonymous"></script>
     <style>
-        .carousel-indicators [data-bs-target]{
+        .carousel-indicators [data-bs-target] {
             width: 12px;
-            height: 12px;   
+            height: 12px;
             background-color: #000;
             border-radius: 50%;
             margin-left: 5px;
             margin-right: 5px;
         }
+
         .section-padding {
             padding-top: 100px;
             padding-bottom: 100px;
@@ -69,7 +70,8 @@
     </nav>
     <div id="slider" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-indicators">
-            <button type="button" data-bs-target="#slider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#slider" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#slider" data-bs-slide-to="1" aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#slider" data-bs-slide-to="2" aria-label="Slide 3"></button>
             <button type="button" data-bs-target="#slider" data-bs-slide-to="3" aria-label="Slide 3"></button>
@@ -83,7 +85,7 @@
                     <p>Some representative placeholder content for the first slide.</p>
                 </div>
             </div>
-            <div class="carousel-item"> 
+            <div class="carousel-item">
                 <img src="https://picsum.photos/id/42/1600/800" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Second slide label</h5>
@@ -108,13 +110,11 @@
                 <img src="https://picsum.photos/id/39/1600/800" class="d-block w-100" alt="...">
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#slider"
-            data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#slider" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#slider"
-            data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#slider" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
@@ -127,9 +127,12 @@
                 <hr class="mt-0">
             </div>
             <div class="col-md-4 text-center mb-5 mb-md-0">
-                <div class="bg-danger text-light rounded-circle d-flex align-items-center justify-content-center mx-auto" style="width:100px;height: 100px;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-shop" viewBox="0 0 16 16">
-                        <path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zM4 15h3v-5H4v5zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3zm3 0h-2v3h2v-3z"/>
+                <div class="bg-danger text-light rounded-circle d-flex align-items-center justify-content-center mx-auto"
+                    style="width:100px;height: 100px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                        class="bi bi-shop" viewBox="0 0 16 16">
+                        <path
+                            d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zM4 15h3v-5H4v5zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3zm3 0h-2v3h2v-3z" />
                     </svg>
                 </div>
                 <h3 class="my-4">關於我</h3>
@@ -139,9 +142,12 @@
                 <a href="#" class="btn btn-outline-danger">繼續閱讀</a>
             </div>
             <div class="col-md-4 text-center mb-5 mb-md-0">
-                <div class="bg-success text-light rounded-circle d-flex align-items-center justify-content-center mx-auto" style="width:100px;height: 100px;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-umbrella" viewBox="0 0 16 16">
-                        <path d="M8 0a.5.5 0 0 1 .5.5v.514C12.625 1.238 16 4.22 16 8c0 0 0 .5-.5.5-.149 0-.352-.145-.352-.145l-.004-.004-.025-.023a3.484 3.484 0 0 0-.555-.394A3.166 3.166 0 0 0 13 7.5c-.638 0-1.178.213-1.564.434a3.484 3.484 0 0 0-.555.394l-.025.023-.003.003s-.204.146-.353.146-.352-.145-.352-.145l-.004-.004-.025-.023a3.484 3.484 0 0 0-.555-.394 3.3 3.3 0 0 0-1.064-.39V13.5H8h.5v.039l-.005.083a2.958 2.958 0 0 1-.298 1.102 2.257 2.257 0 0 1-.763.88C7.06 15.851 6.587 16 6 16s-1.061-.148-1.434-.396a2.255 2.255 0 0 1-.763-.88 2.958 2.958 0 0 1-.302-1.185v-.025l-.001-.009v-.003s0-.002.5-.002h-.5V13a.5.5 0 0 1 1 0v.506l.003.044a1.958 1.958 0 0 0 .195.726c.095.191.23.367.423.495.19.127.466.229.879.229s.689-.102.879-.229c.193-.128.328-.304.424-.495a1.958 1.958 0 0 0 .197-.77V7.544a3.3 3.3 0 0 0-1.064.39 3.482 3.482 0 0 0-.58.417l-.004.004S5.65 8.5 5.5 8.5c-.149 0-.352-.145-.352-.145l-.004-.004a3.482 3.482 0 0 0-.58-.417A3.166 3.166 0 0 0 3 7.5c-.638 0-1.177.213-1.564.434a3.482 3.482 0 0 0-.58.417l-.004.004S.65 8.5.5 8.5C0 8.5 0 8 0 8c0-3.78 3.375-6.762 7.5-6.986V.5A.5.5 0 0 1 8 0zM6.577 2.123c-2.833.5-4.99 2.458-5.474 4.854A4.124 4.124 0 0 1 3 6.5c.806 0 1.48.25 1.962.511a9.706 9.706 0 0 1 .344-2.358c.242-.868.64-1.765 1.271-2.53zm-.615 4.93A4.16 4.16 0 0 1 8 6.5a4.16 4.16 0 0 1 2.038.553 8.688 8.688 0 0 0-.307-2.13C9.434 3.858 8.898 2.83 8 2.117c-.898.712-1.434 1.74-1.731 2.804a8.687 8.687 0 0 0-.307 2.131zm3.46-4.93c.631.765 1.03 1.662 1.272 2.53.233.833.328 1.66.344 2.358A4.14 4.14 0 0 1 13 6.5c.77 0 1.42.23 1.897.477-.484-2.396-2.641-4.355-5.474-4.854z"/>
+                <div class="bg-success text-light rounded-circle d-flex align-items-center justify-content-center mx-auto"
+                    style="width:100px;height: 100px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                        class="bi bi-umbrella" viewBox="0 0 16 16">
+                        <path
+                            d="M8 0a.5.5 0 0 1 .5.5v.514C12.625 1.238 16 4.22 16 8c0 0 0 .5-.5.5-.149 0-.352-.145-.352-.145l-.004-.004-.025-.023a3.484 3.484 0 0 0-.555-.394A3.166 3.166 0 0 0 13 7.5c-.638 0-1.178.213-1.564.434a3.484 3.484 0 0 0-.555.394l-.025.023-.003.003s-.204.146-.353.146-.352-.145-.352-.145l-.004-.004-.025-.023a3.484 3.484 0 0 0-.555-.394 3.3 3.3 0 0 0-1.064-.39V13.5H8h.5v.039l-.005.083a2.958 2.958 0 0 1-.298 1.102 2.257 2.257 0 0 1-.763.88C7.06 15.851 6.587 16 6 16s-1.061-.148-1.434-.396a2.255 2.255 0 0 1-.763-.88 2.958 2.958 0 0 1-.302-1.185v-.025l-.001-.009v-.003s0-.002.5-.002h-.5V13a.5.5 0 0 1 1 0v.506l.003.044a1.958 1.958 0 0 0 .195.726c.095.191.23.367.423.495.19.127.466.229.879.229s.689-.102.879-.229c.193-.128.328-.304.424-.495a1.958 1.958 0 0 0 .197-.77V7.544a3.3 3.3 0 0 0-1.064.39 3.482 3.482 0 0 0-.58.417l-.004.004S5.65 8.5 5.5 8.5c-.149 0-.352-.145-.352-.145l-.004-.004a3.482 3.482 0 0 0-.58-.417A3.166 3.166 0 0 0 3 7.5c-.638 0-1.177.213-1.564.434a3.482 3.482 0 0 0-.58.417l-.004.004S.65 8.5.5 8.5C0 8.5 0 8 0 8c0-3.78 3.375-6.762 7.5-6.986V.5A.5.5 0 0 1 8 0zM6.577 2.123c-2.833.5-4.99 2.458-5.474 4.854A4.124 4.124 0 0 1 3 6.5c.806 0 1.48.25 1.962.511a9.706 9.706 0 0 1 .344-2.358c.242-.868.64-1.765 1.271-2.53zm-.615 4.93A4.16 4.16 0 0 1 8 6.5a4.16 4.16 0 0 1 2.038.553 8.688 8.688 0 0 0-.307-2.13C9.434 3.858 8.898 2.83 8 2.117c-.898.712-1.434 1.74-1.731 2.804a8.687 8.687 0 0 0-.307 2.131zm3.46-4.93c.631.765 1.03 1.662 1.272 2.53.233.833.328 1.66.344 2.358A4.14 4.14 0 0 1 13 6.5c.77 0 1.42.23 1.897.477-.484-2.396-2.641-4.355-5.474-4.854z" />
                     </svg>
                 </div>
                 <h3 class="my-4">關於我</h3>
@@ -151,10 +157,14 @@
                 <a href="#" class="btn btn-outline-success">繼續閱讀</a>
             </div>
             <div class="col-md-4 text-center mb-5 mb-md-0">
-                <div class="bg-warning text-light rounded-circle d-flex align-items-center justify-content-center mx-auto" style="width:100px;height: 100px;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-stack" viewBox="0 0 16 16">
-                        <path d="m14.12 10.163 1.715.858c.22.11.22.424 0 .534L8.267 15.34a.598.598 0 0 1-.534 0L.165 11.555a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.66zM7.733.063a.598.598 0 0 1 .534 0l7.568 3.784a.3.3 0 0 1 0 .535L8.267 8.165a.598.598 0 0 1-.534 0L.165 4.382a.299.299 0 0 1 0-.535L7.733.063z"/>
-                        <path d="m14.12 6.576 1.715.858c.22.11.22.424 0 .534l-7.568 3.784a.598.598 0 0 1-.534 0L.165 7.968a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.659z"/>
+                <div class="bg-warning text-light rounded-circle d-flex align-items-center justify-content-center mx-auto"
+                    style="width:100px;height: 100px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                        class="bi bi-stack" viewBox="0 0 16 16">
+                        <path
+                            d="m14.12 10.163 1.715.858c.22.11.22.424 0 .534L8.267 15.34a.598.598 0 0 1-.534 0L.165 11.555a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.66zM7.733.063a.598.598 0 0 1 .534 0l7.568 3.784a.3.3 0 0 1 0 .535L8.267 8.165a.598.598 0 0 1-.534 0L.165 4.382a.299.299 0 0 1 0-.535L7.733.063z" />
+                        <path
+                            d="m14.12 6.576 1.715.858c.22.11.22.424 0 .534l-7.568 3.784a.598.598 0 0 1-.534 0L.165 7.968a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.659z" />
                     </svg>
                 </div>
                 <h3 class="my-4">關於我</h3>
@@ -162,6 +172,65 @@
                     一口氣，搭配桌面可見方便說話推坑大魔王提前師傅下載次數起來，說明卻是對她為止虛擬避免出現飛機，從事予以，初音解決，實在。
                 </p>
                 <a href="#" class="btn btn-outline-warning">繼續閱讀</a>
+            </div>
+        </div>
+    </div>
+    <div class="section-padding" style="background-color: #e1f9ff;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mb-5 text-center text-md-start">
+                    <h2 class="mb-0">最新文章</h2>
+                    <p class="text-muted mb-0">台北需要協議各國，也就典型說。</p>
+                    <hr class="mt-0">
+                </div>
+                <div class="col-xl-3 col-md-6">
+                    <div class="card">
+                        <img src="https://picsum.photos/id/88/800/600" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h3 class="card-title fs-4">[分享] 老車不死 Honda 2003 CR-V</h3>
+                            <p class="card-text">
+                                三大參數雜誌哪裡實現腦袋出售發送他還戰略天堂招商您的必然，顧問國內轉貼相關圖片不能下載，大多當我對。
+                            </p>
+                            <a href="#" class="btn btn-primary">繼續閱讀</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+                    <div class="card">
+                        <img src="https://picsum.photos/id/88/800/600" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h3 class="card-title fs-4">[分享] 老車不死 Honda 2003 CR-V</h3>
+                            <p class="card-text">
+                                三大參數雜誌哪裡實現腦袋出售發送他還戰略天堂招商您的必然，顧問國內轉貼相關圖片不能下載，大多當我對。
+                            </p>
+                            <a href="#" class="btn btn-primary">繼續閱讀</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+                    <div class="card">
+                        <img src="https://picsum.photos/id/88/800/600" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h3 class="card-title fs-4">[分享] 老車不死 Honda 2003 CR-V</h3>
+                            <p class="card-text">
+                                三大參數雜誌哪裡實現腦袋出售發送他還戰略天堂招商您的必然，顧問國內轉貼相關圖片不能下載，大多當我對。
+                            </p>
+                            <a href="#" class="btn btn-primary">繼續閱讀</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+                    <div class="card">
+                        <img src="https://picsum.photos/id/88/800/600" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h3 class="card-title fs-4">[分享] 老車不死 Honda 2003 CR-V</h3>
+                            <p class="card-text">
+                                三大參數雜誌哪裡實現腦袋出售發送他還戰略天堂招商您的必然，顧問國內轉貼相關圖片不能下載，大多當我對。
+                            </p>
+                            <a href="#" class="btn btn-primary">繼續閱讀</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
