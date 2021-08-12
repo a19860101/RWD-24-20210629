@@ -23,3 +23,24 @@ console.log(x === y);// 值與型態皆須相同
 console.log(a == b);
 console.log(a === b);// 值與型態皆須相同
 console.log(x != y);
+
+// 指定運算子
+console.log(x = y);
+console.log(x += y); // x = x + y
+console.log(x -= y); // x = x - y
+console.log(x *= y); // x = x * y
+console.log(x /= y); // x = x / y
+console.log(x %= y); // x = x % y
+// x = 0;
+
+// 邏輯運算子(AND OR NOT)
+console.log(x > 0 && y > 0);
+console.log(x > 0 || y > 0);
+console.log(!x);
+console.log(!y);
+
+//
+console.log(x++);
+console.log(x);
+console.log(y--);
+console.log(y);
