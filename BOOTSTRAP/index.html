@@ -25,10 +25,12 @@
             padding-top: 100px;
             padding-bottom: 100px;
         }
+
         #portfolio img {
             opacity: .5;
             transition: .5s;
         }
+
         #portfolio a:hover img {
             opacity: 1;
         }
@@ -244,65 +246,65 @@
     <div class="container-fluid px-0" id="portfolio">
         <div class="row row-cols-xl-6 row-cols-lg-4 row-cols-md-3 row-cols-2 g-0">
             <div class="col">
-                <a href="#" class="d-block bg-black">
+                <a href="#" class="d-block bg-black" data-bs-toggle="modal" data-bs-target="#p1">
                     <img src="https://picsum.photos/id/31/800/600" class="w-100 d-block">
                 </a>
-            </div>       
+            </div>
             <div class="col">
-                <a href="#" class="d-block bg-black">
+                <a href="#" class="d-block bg-black" data-bs-toggle="modal" data-bs-target="#p2">
                     <img src="https://picsum.photos/id/32/800/600" class="w-100 d-block">
                 </a>
-            </div>       
+            </div>
             <div class="col">
                 <a href="#" class="d-block bg-black">
                     <img src="https://picsum.photos/id/33/800/600" class="w-100 d-block">
                 </a>
-            </div>       
+            </div>
             <div class="col">
                 <a href="#" class="d-block bg-black">
                     <img src="https://picsum.photos/id/34/800/600" class="w-100 d-block">
                 </a>
-            </div>       
+            </div>
             <div class="col">
                 <a href="#" class="d-block bg-black">
                     <img src="https://picsum.photos/id/35/800/600" class="w-100 d-block">
                 </a>
-            </div>       
+            </div>
             <div class="col">
                 <a href="#" class="d-block bg-black">
                     <img src="https://picsum.photos/id/36/800/600" class="w-100 d-block">
                 </a>
-            </div>  
+            </div>
             <div class="col">
                 <a href="#" class="d-block bg-black">
                     <img src="https://picsum.photos/id/37/800/600" class="w-100 d-block">
                 </a>
-            </div>       
+            </div>
             <div class="col">
                 <a href="#" class="d-block bg-black">
                     <img src="https://picsum.photos/id/38/800/600" class="w-100 d-block">
                 </a>
-            </div>       
+            </div>
             <div class="col">
                 <a href="#" class="d-block bg-black">
                     <img src="https://picsum.photos/id/39/800/600" class="w-100 d-block">
                 </a>
-            </div>       
+            </div>
             <div class="col">
                 <a href="#" class="d-block bg-black">
                     <img src="https://picsum.photos/id/40/800/600" class="w-100 d-block">
                 </a>
-            </div>       
+            </div>
             <div class="col">
                 <a href="#" class="d-block bg-black">
                     <img src="https://picsum.photos/id/41/800/600" class="w-100 d-block">
                 </a>
-            </div>       
+            </div>
             <div class="col">
                 <a href="#" class="d-block bg-black">
                     <img src="https://picsum.photos/id/42/800/600" class="w-100 d-block">
                 </a>
-            </div>    
+            </div>
         </div>
     </div>
     <div class="section-padding container">
@@ -330,8 +332,10 @@
                         <label for="" class="form-label">內容</label>
                         <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
                     </div>
-                    <input type="submit" value="送出" class="btn text-white w-100 d-block d-xl-none" style="background-color: crimson;">
-                    <input type="submit" value="送出" class="btn text-white d-none d-xl-block" style="background-color: crimson;">
+                    <input type="submit" value="送出" class="btn text-white w-100 d-block d-xl-none"
+                        style="background-color: crimson;">
+                    <input type="submit" value="送出" class="btn text-white d-none d-xl-block"
+                        style="background-color: crimson;">
                 </form>
             </div>
         </div>
@@ -391,6 +395,34 @@
     <div class="d-md-flex justify-content-between bg-black text-white p-3 text-center text-lg-left">
         <div>某某股份有限公司</div>
         <div>All Rights Resered&copy;2021</div>
+    </div>
+    <!-- modal -->
+    <div class="modal fade" id="p1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://picsum.photos/id/31/800/600" class="w-100 d-block">
+                </div>
+                <!-- <div class="modal-footer"> -->
+                    <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="p2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <img src="https://picsum.photos/id/32/800/600" class="w-100 d-block">
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 
