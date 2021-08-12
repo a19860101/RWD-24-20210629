@@ -55,3 +55,6 @@ console.log(s + ' ' + user);
 // 字串樣板
 console.log(`Hello ${user}`)
 console.log(`${s} ${user}`)
+
+// 三元運算子 -> 判斷式
+// 分散運算子 -> 陣列
