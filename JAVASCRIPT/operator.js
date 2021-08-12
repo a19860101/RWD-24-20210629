@@ -44,3 +44,14 @@ console.log(x++);
 console.log(x);
 console.log(y--);
 console.log(y);
+
+// 字串運算子
+console.log(a + b);
+let user = 'John';
+console.log('hello '+user);
+let s = 'hello';
+console.log(s + ' ' + user);
+
+// 字串樣板
+console.log(`Hello ${user}`)
+console.log(`${s} ${user}`)
