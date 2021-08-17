@@ -90,4 +90,10 @@ let foodsMap = foods.map(function(food){
     return food.length > 2 ? food:null;
 });
 
-console.log(foodsMap);
+// console.log(foodsMap);
+
+// filter
+let foodsFilter = foods.filter(function(food){
+    return food.length == 3;
+})
+console.log(foodsFilter);
