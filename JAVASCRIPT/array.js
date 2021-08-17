@@ -46,7 +46,7 @@ foods.unshift('烤玉米');
 // foods.splice(2,0,'紅燒牛肉麵','清燉牛肉麵');
 // foods.splice(4,1);
 
-console.log(foods)
+// console.log(foods)
 
 // slice() 切片
 // let newFoods =  foods.slice(1,3);
@@ -54,7 +54,7 @@ console.log(foods)
 let day1 = foods.slice(0,2);
 let day2 = foods.slice(2,4);
 let day3 = foods.slice(4,6);
-console.log(day1,day2,day3);
+// console.log(day1,day2,day3);
 
 // join() 陣列->字串
 // let foodStr = foods.join();
@@ -62,9 +62,17 @@ console.log(day1,day2,day3);
 
 // toString()陣列->字串
 let foodStr = foods.toString();
-console.log(foodStr);
+// console.log(foodStr);
 
 // split() 字串->陣列
 let s = '烤玉米,滷肉飯,牛肉麵,肉圓,臭豆腐,豆花';
 let sArray = s.split(',');
-console.log(sArray);
+// console.log(sArray);
+
+// sort() 排序
+let arr = ['Banana','Apple','Fruit','Cat'];
+// console.log(arr.sort());
+
+// reverse() 反轉
+// console.log(arr.reverse());
+console.log(arr.sort().reverse());
