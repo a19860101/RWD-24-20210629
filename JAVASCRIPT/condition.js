@@ -1,5 +1,5 @@
 // if
-let x = 1020;
+let x = 123;
 if(x > 0){
     console.log('success');
 }
@@ -25,13 +25,24 @@ if(x > 0){
 switch(x){
     case 0:
         console.log(0);
-        break;
+        // break;
     case 10:
         console.log(10);
-        break;
+        // break;
     case 100:
         console.log(100);
-        break;
+        // break;
     default:
         console.log('error');
+}
+
+switch(true){
+    case x > 0:
+        console.log('正數');
+        break;
+    case x < 0:
+        console.log('負數');
+        break;
+    default:
+        console.log('error!!!!!');
 }
