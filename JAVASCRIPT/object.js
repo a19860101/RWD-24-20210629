@@ -49,14 +49,19 @@ drinks.forEach(function(drink){
 let drinksName = drinks.map(function(drink){
     return drink.name;
 })
-let drinksPrice = drinks.map(function(drink){
-    return drink.price;
-})
+// let drinksPrice = drinks.map(function(drink){
+//     return drink.price;
+// })
+
+let drinksPrice = drinks.map(drink => drink.price);
 console.log(drinks);
 console.log(drinksName);
 console.log(drinksPrice);
 
-let cheap = drinks.filter(function(drink){
-    return drink.price < 50;
-})
+// let cheap = drinks.filter(function(drink){
+//     return drink.price < 50;
+// })
+
+let cheap = drinks.filter(drink => drink.price < 50);
+
 console.log(cheap);
