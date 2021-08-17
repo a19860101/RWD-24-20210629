@@ -96,4 +96,13 @@ let foodsMap = foods.map(function(food){
 let foodsFilter = foods.filter(function(food){
     return food.length == 3;
 })
-console.log(foodsFilter);
+// console.log(foodsFilter);
+
+// reduce()
+let num = [1,2,3,4,5];
+let total = num.reduce(function(a,b){
+    console.log('a',a)
+    console.log('b',b)
+    return a + b;
+})
+console.log(total);
