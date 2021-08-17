@@ -55,3 +55,16 @@ let day1 = foods.slice(0,2);
 let day2 = foods.slice(2,4);
 let day3 = foods.slice(4,6);
 console.log(day1,day2,day3);
+
+// join() 陣列->字串
+// let foodStr = foods.join();
+// let foodStr = foods.join('_');
+
+// toString()陣列->字串
+let foodStr = foods.toString();
+console.log(foodStr);
+
+// split() 字串->陣列
+let s = '烤玉米,滷肉飯,牛肉麵,肉圓,臭豆腐,豆花';
+let sArray = s.split(',');
+console.log(sArray);
