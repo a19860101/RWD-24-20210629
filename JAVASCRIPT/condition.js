@@ -46,3 +46,12 @@ switch(true){
     default:
         console.log('error!!!!!');
 }
+
+// 三元運算子
+let i = -100;
+let result = i > 0 ? 'success@':'error@';
+console.log(result);
+// 條件 ? 成立 : 不成立
+let result2 = i > 0 ? 'success@@': i < 0 ? 'success@@@':'error@@';
+console.log(result2);
+// 條件 ? 成立 : 條件二 ? '成立':'不成立'
