@@ -30,20 +30,28 @@ let foods = ['滷肉飯','牛肉麵','肉圓','臭豆腐','豆花'];
 // }
 
 // push() 新增資料到陣列後方
-foods.push('鹹水雞','麻油雞');
+// foods.push('鹹水雞','麻油雞');
 
 // pop() 刪除陣列後方的資料
-foods.pop();
+// foods.pop();
 
 // unshift()  新增資料到陣列前方
 foods.unshift('烤玉米');
 
 // shift() 刪除陣列的第一筆資料
-foods.shift();
+// foods.shift();
 
 // splice() 拼接
 // foods.splice(1,1,'紅燒牛肉麵','清燉牛肉麵');
 // foods.splice(2,0,'紅燒牛肉麵','清燉牛肉麵');
-foods.splice(4,1);
+// foods.splice(4,1);
 
 console.log(foods)
+
+// slice() 切片
+// let newFoods =  foods.slice(1,3);
+// console.log(newFoods)
+let day1 = foods.slice(0,2);
+let day2 = foods.slice(2,4);
+let day3 = foods.slice(4,6);
+console.log(day1,day2,day3);
