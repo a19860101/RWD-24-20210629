@@ -75,4 +75,19 @@ let arr = ['Banana','Apple','Fruit','Cat'];
 
 // reverse() 反轉
 // console.log(arr.reverse());
-console.log(arr.sort().reverse());
+// console.log(arr.sort().reverse());
+
+// forEach
+
+foods.forEach(function(food,index){
+    console.log(food,index)
+});
+
+// map
+let foodsMap = foods.map(function(food){
+    // return food.length;
+    // return '售完';
+    return food.length > 2 ? food:null;
+});
+
+console.log(foodsMap);
