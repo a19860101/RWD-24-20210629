@@ -18,35 +18,27 @@
         }
         .tab-nav {
             display: flex;
-            border-bottom: 1px solid #000000;
+            background-color: #e4e4e4;
         }
         .tab-link {
             text-decoration: none;
             color: #222;
             padding: 10px 15px;
-            border: 1px solid transparent;
-            margin-bottom: -1px;
-            border-radius: 10px 10px 0 0;
 
-
-            transition: .6s;
+            transition: .5s;
         }
         .tab-link.active {
-            border-left: 1px solid #000;
-            border-right: 1px solid #000;
-            border-top: 1px solid #000;
-            border-bottom: 1px solid #fff;
+            background-color: #70d5fd;
         }
         .tab-panel {
             padding: 15px;
             display: none;
-            border-right: 1px solid #000;
-            border-left: 1px solid #000;
-            border-bottom: 1px solid #000;
         }
         .tab-panel.active {
             display: block;
-            animation:fade-in .8s;
+            background-color: #70d5fd;
+
+            animation: fade-in .5s;
         }
         @keyframes fade-in {
             from {opacity: 0;}
@@ -101,23 +93,20 @@
     <script>
         let tabLinks = document.querySelectorAll('.tab-link');
         tabLinks.forEach(tabLink => {
-            tabLink.onclick = function(){
+            tabLink.onclick = event => {
                 for(let tabLink of tabLinks){
                     tabLink.classList.remove('active');
                 }
-                this.classList.add('active');
-
-                let href = this.getAttribute('href');
-                let dataPanel = this.dataset.panel;
-                console.log(href,dataPanel);
+                event.target.classList.add('active');
+            
+                let dataPanel = event.target.dataset.panel;
                 
-                document.querySelectorAll('.tab-panel').forEach(panel=>{
-                    panel.classList.remove('active');
-                    console.log(panel);
-                })
+                
+                document.querySelectorAll('.tab-panel').forEach(tabPanel=>{
+                    tabPanel.classList.remove('active');
 
-                // document.querySelector(dataPanel).classList.add('active');
-                document.querySelector(href).classList.add('active');
+                })
+                document.querySelector(dataPanel).classList.add('active');
             }
         })
     </script>
