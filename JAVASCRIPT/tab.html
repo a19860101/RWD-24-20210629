@@ -24,6 +24,7 @@
             text-decoration: none;
             color: #222;
             padding: 10px 15px;
+            border: 1px solid transparent;
         }
         .tab-link.active {
             border-left: 1px solid #000;
@@ -88,5 +89,16 @@
             
         </div>
     </div>
+    <script>
+        let tabLinks = document.querySelectorAll('.tab-link');
+        tabLinks.forEach(tabLink => {
+            tabLink.onclick = function(){
+                for(let tabLink of tabLinks){
+                    tabLink.classList.remove('active');
+                }
+                this.classList.add('active');
+            }
+        })
+    </script>
 </body>
 </html>
