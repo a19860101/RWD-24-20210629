@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI';
+        }
+        .tab {
+            width: 600px;
+            margin: auto;
+        }
+        .tab-nav {
+            display: flex;
+            border-bottom: 1px solid #000;
+        }
+        .tab-link {
+            text-decoration: none;
+            color: #222;
+            padding: 10px 15px;
+        }
+        .tab-link.active {
+            border-left: 1px solid #000;
+            border-right: 1px solid #000;
+            border-top: 1px solid #000;
+            border-radius: 10px 10px 0 0;
+        }
+        .tab-panel {
+            padding: 15px;
+            display: none;
+            border-right: 1px solid #000;
+            border-left: 1px solid #000;
+            border-bottom: 1px solid #000;
+        }
+        .tab-panel.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="tab">
+        <div class="tab-nav">
+            <a href="#tab-1" data-panel="#tab-1" class="tab-link active">tab 1</a>
+            <a href="#tab-2" data-panel="#tab-2" class="tab-link">tab 2</a>
+            <a href="#tab-3" data-panel="#tab-3" class="tab-link">tab 3</a>
+        </div>
+        <div class="tab-panel active" id="tab-1">
+            <h3>title 1</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos dolore porro iste et hic, laudantium quae atque facilis? Error, reiciendis! Commodi in earum saepe quos mollitia animi voluptate, laboriosam asperiores!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos dolore porro iste et hic, laudantium quae atque facilis? Error, reiciendis! Commodi in earum saepe quos mollitia animi voluptate, laboriosam asperiores!
+            </p>
+        </div>
+        <div class="tab-panel" id="tab-2">
+            <h3>title 2</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos dolore porro iste et hic, laudantium quae atque facilis? Error, reiciendis! Commodi in earum saepe quos mollitia animi voluptate, laboriosam asperiores!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos dolore porro iste et hic, laudantium quae atque facilis? Error, reiciendis! Commodi in earum saepe quos mollitia animi voluptate, laboriosam asperiores!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos dolore porro iste et hic, laudantium quae atque facilis? Error, reiciendis! Commodi in earum saepe quos mollitia animi voluptate, laboriosam asperiores!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos dolore porro iste et hic, laudantium quae atque facilis? Error, reiciendis! Commodi in earum saepe quos mollitia animi voluptate, laboriosam asperiores!
+            </p>
+        </div>
+        <div class="tab-panel" id="tab-3">
+            <h3>title 3</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos dolore porro iste et hic, laudantium quae atque facilis? Error, reiciendis! Commodi in earum saepe quos mollitia animi voluptate, laboriosam asperiores!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos dolore porro iste et hic, laudantium quae atque facilis? Error, reiciendis! Commodi in earum saepe quos mollitia animi voluptate, laboriosam asperiores!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos dolore porro iste et hic, laudantium quae atque facilis? Error, reiciendis! Commodi in earum saepe quos mollitia animi voluptate, laboriosam asperiores!
+            </p>
+            
+        </div>
+    </div>
+</body>
+</html>
