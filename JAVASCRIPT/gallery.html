@@ -32,5 +32,14 @@
             <img src="images/iphone-12-purple-select-2021.png" class="thumb">
         </div>
     </div>
+    <script>
+        document.querySelectorAll('.thumb').forEach(t => {
+            t.onclick = e => {
+                let newImg = e.target.getAttribute('src');
+                console.log(newImg);
+                document.querySelector('.main').setAttribute('src',newImg);
+            }
+        })
+    </script>
 </body>
 </html>
