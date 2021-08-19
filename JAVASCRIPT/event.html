@@ -20,6 +20,7 @@
 <body>
     <button class="addBtn">Add</button>
     <button class="removeBtn">Remove</button>
+    <button class="toggleBtn">Toggle</button>
     <button class="reset">Reset</button>
     <button onclick="changeColor()">click 2</button>
     <p>
@@ -29,6 +30,7 @@
         let addBtn = document.querySelector('.addBtn');
         let rmBtn = document.querySelector('.removeBtn');
         let reset = document.querySelector('.reset');
+        let toggleBtn = document.querySelector('.toggleBtn');
         let p = document.querySelector('p');
         addBtn.onclick = () => {
             // p.style.color = '#fff';
@@ -40,12 +42,15 @@
         rmBtn.onclick = ()=>{
             p.classList.remove('changeColor');
         }
+        toggleBtn.onclick = ()=>{
+            p.classList.toggle('changeColor');
+        }
         reset.onclick = ()=>{
             p.className = '';
-            p.style.color = 'initial';
-            p.style.backgroundColor = 'initial';
-            p.style.padding = 'initial';
-            p.style.borderRadius = 'initial';
+            p.style.color = '';
+            p.style.backgroundColor = '';
+            p.style.padding = '';
+            p.style.borderRadius = '';
         }
 
         let changeColor = () => {
