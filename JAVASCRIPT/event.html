@@ -5,29 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        p {
+            transition: .5s;
+        }
+        p.changeColor {
+            color: #fff;
+            background-color: #fa0;
+            padding: 15px;
+            border-radius: 15px;
+        }
+    </style>
 </head>
 <body>
-    <button>click</button>
+    <button class="addBtn">Add</button>
+    <button class="removeBtn">Remove</button>
+    <button class="reset">Reset</button>
     <button onclick="changeColor()">click 2</button>
     <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, nisi sint. Voluptates culpa omnis minima sapiente unde temporibus voluptatum veritatis corrupti, provident laboriosam repellendus a impedit aspernatur itaque adipisci voluptatibus!
     </p>
     <script>
-        let btn = document.querySelector('button');
-        btn.onclick = () => {
-            let p = document.querySelector('p');
-            p.style.color = '#fff';
-            p.style.backgroundColor = 'orange';
-            p.style.padding = '15px';
-            p.style.borderRadius = '15px';
+        let addBtn = document.querySelector('.addBtn');
+        let rmBtn = document.querySelector('.removeBtn');
+        let reset = document.querySelector('.reset');
+        let p = document.querySelector('p');
+        addBtn.onclick = () => {
+            // p.style.color = '#fff';
+            // p.style.backgroundColor = 'orange';
+            // p.style.padding = '15px';
+            // p.style.borderRadius = '15px';
+            p.classList.add('changeColor');
         }
+        rmBtn.onclick = ()=>{
+            p.classList.remove('changeColor');
+        }
+        reset.onclick = ()=>{
+            p.className = '';
+            p.style.color = 'initial';
+            p.style.backgroundColor = 'initial';
+            p.style.padding = 'initial';
+            p.style.borderRadius = 'initial';
+        }
+
         let changeColor = () => {
-            let p = document.querySelector('p');
             p.style.color = 'greenyellow';
             p.style.backgroundColor = 'red';
             p.style.padding = '15px';
             p.style.borderRadius = '15px';
         }
+
+        // addBtn.addEventListener('click',changeColor);
+        // addBtn.addEventListener('click',function(){
+        //     let p = document.querySelector('p');
+        //     p.style.color = '#fff';
+        //     p.style.backgroundColor = 'orange';
+        //     p.style.padding = '15px';
+        //     p.style.borderRadius = '15px';
+        // });
     </script>
 </body>
 </html>
