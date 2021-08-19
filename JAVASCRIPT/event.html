@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>click</button>
+    <button onclick="changeColor()">click 2</button>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, nisi sint. Voluptates culpa omnis minima sapiente unde temporibus voluptatum veritatis corrupti, provident laboriosam repellendus a impedit aspernatur itaque adipisci voluptatibus!
+    </p>
+    <script>
+        let btn = document.querySelector('button');
+        btn.onclick = () => {
+            let p = document.querySelector('p');
+            p.style.color = '#fff';
+            p.style.backgroundColor = 'orange';
+            p.style.padding = '15px';
+            p.style.borderRadius = '15px';
+        }
+        let changeColor = () => {
+            let p = document.querySelector('p');
+            p.style.color = 'greenyellow';
+            p.style.backgroundColor = 'red';
+            p.style.padding = '15px';
+            p.style.borderRadius = '15px';
+        }
+    </script>
+</body>
+</html>
