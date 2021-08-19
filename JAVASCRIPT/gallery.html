@@ -17,6 +17,11 @@
         .thumb {
             width: calc(100% / 6);
             cursor: pointer;
+            opacity: .3;
+            transition: .5s;
+        }
+        .thumb.active {
+            opacity: 1;
         }
     </style>
 </head>
@@ -24,7 +29,7 @@
     <div class="gallery">
         <img src="images/iphone-12-black-select-2020.png" class="main">
         <div class="thumbs">
-            <img src="images/iphone-12-black-select-2020.png" class="thumb">
+            <img src="images/iphone-12-black-select-2020.png" class="thumb active">
             <img src="images/iphone-12-blue-select-2020.png" class="thumb">
             <img src="images/iphone-12-white-select-2020.png" class="thumb">
             <img src="images/iphone-12-red-select-2020.png" class="thumb">
@@ -33,11 +38,18 @@
         </div>
     </div>
     <script>
-        document.querySelectorAll('.thumb').forEach(t => {
+        let thumbs = document.querySelectorAll('.thumb');
+        thumbs.forEach(t => {
             t.onclick = e => {
                 let newImg = e.target.getAttribute('src');
                 console.log(newImg);
                 document.querySelector('.main').setAttribute('src',newImg);
+
+                for(let t of thumbs){
+                    t.classList.remove('active');
+                }
+                e.target.classList.add('active');
+                
             }
         })
     </script>
