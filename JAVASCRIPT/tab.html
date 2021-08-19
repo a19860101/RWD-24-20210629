@@ -18,18 +18,20 @@
         }
         .tab-nav {
             display: flex;
-            border-bottom: 1px solid #000;
+            border-bottom: 1px solid #000000;
         }
         .tab-link {
             text-decoration: none;
             color: #222;
             padding: 10px 15px;
             border: 1px solid transparent;
+            margin-bottom: -1px;
         }
         .tab-link.active {
             border-left: 1px solid #000;
             border-right: 1px solid #000;
             border-top: 1px solid #000;
+            border-bottom: 1px solid #fff;
             border-radius: 10px 10px 0 0;
         }
         .tab-panel {
@@ -97,6 +99,18 @@
                     tabLink.classList.remove('active');
                 }
                 this.classList.add('active');
+
+                let href = this.getAttribute('href');
+                let dataPanel = this.dataset.panel;
+                console.log(href,dataPanel);
+                
+                document.querySelectorAll('.tab-panel').forEach(panel=>{
+                    panel.classList.remove('active');
+                    console.log(panel);
+                })
+
+                // document.querySelector(dataPanel).classList.add('active');
+                document.querySelector(href).classList.add('active');
             }
         })
     </script>
