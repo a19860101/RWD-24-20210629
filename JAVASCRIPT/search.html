@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <input type="text" id="input">
     <label for="u">區分大小寫</label>
@@ -28,34 +30,35 @@
     <script>
         let u = document.querySelector('#u');
         let input = document.querySelector('#input');
-        u.onchange = function(){
-            console.log(u.checked);
-            if(u.checked == true){
-                input.onkeyup = function(){
-                    let li = document.querySelectorAll('li');
-                    li.forEach(function(data){
-                        if(data.textContent.indexOf(input.value) > -1){
+        input.onkeyup = function () {
+            let uCheck = u.checked;
+            console.log(uCheck);
+            let li = document.querySelectorAll('li');
+            li.forEach(function (data) {
+                if (uCheck == true) {
+                    console.log('區分大小寫');
+                    li.forEach(function (data) {
+                        if (data.textContent.indexOf(input.value) > -1) {
                             data.style.display = '';
-                        }else{
+                        } else {
+                            data.style.display = 'none';
+                        }
+                    })
+                } else {
+                    console.log('不區分大小寫')
+                    li.forEach(function (data) {
+                        if (data.textContent.toUpperCase().indexOf(input.value.toUpperCase()) > -1) {
+                            data.style.display = '';
+                        } else {
                             data.style.display = 'none';
                         }
                     })
                 }
-            }else{
-                input.onkeyup = function(){
-                    let li = document.querySelectorAll('li');
-                    li.forEach(function(data){
-                        if(data.textContent.toUpperCase().indexOf(input.value.toUpperCase()) > -1){
-                            data.style.display = '';
-                        }else{
-                            data.style.display = 'none';
-                        }
-                    })
-                }
-            }
+            })
         }
-        
-        
+
+
     </script>
 </body>
+
 </html>
