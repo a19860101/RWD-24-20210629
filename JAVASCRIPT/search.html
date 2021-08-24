@@ -26,7 +26,14 @@
     <script>
         let input = document.querySelector('#input');
         input.onkeyup = function(){
-            console.log(input.value);
+            let li = document.querySelectorAll('li');
+            li.forEach(function(data){
+                if(data.textContent.indexOf(input.value) > -1){
+                    data.style.display = '';
+                }else{
+                    data.style.display = 'none';
+                }
+            })
         }
     </script>
 </body>
