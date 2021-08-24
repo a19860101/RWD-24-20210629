@@ -8,6 +8,8 @@
 </head>
 <body>
     <input type="text" id="input">
+    <label for="u">區分大小寫</label>
+    <input type="checkbox" id="u" value="u">
     <ul>
         <li>熟成紅茶</li>
         <li>麗春紅茶</li>
@@ -24,28 +26,36 @@
         <li>Latte</li>
     </ul>
     <script>
-        // let input = document.querySelector('#input');
-        // input.onkeyup = function(){
-        //     let li = document.querySelectorAll('li');
-        //     li.forEach(function(data){
-        //         if(data.textContent.indexOf(input.value) > -1){
-        //             data.style.display = '';
-        //         }else{
-        //             data.style.display = 'none';
-        //         }
-        //     })
-        // }
+        let u = document.querySelector('#u');
         let input = document.querySelector('#input');
-        input.onkeyup = function(){
-            let li = document.querySelectorAll('li');
-            li.forEach(function(data){
-                if(data.textContent.toUpperCase().indexOf(input.value.toUpperCase()) > -1){
-                    data.style.display = '';
-                }else{
-                    data.style.display = 'none';
+        u.onchange = function(){
+            console.log(u.checked);
+            if(u.checked == true){
+                input.onkeyup = function(){
+                    let li = document.querySelectorAll('li');
+                    li.forEach(function(data){
+                        if(data.textContent.indexOf(input.value) > -1){
+                            data.style.display = '';
+                        }else{
+                            data.style.display = 'none';
+                        }
+                    })
                 }
-            })
+            }else{
+                input.onkeyup = function(){
+                    let li = document.querySelectorAll('li');
+                    li.forEach(function(data){
+                        if(data.textContent.toUpperCase().indexOf(input.value.toUpperCase()) > -1){
+                            data.style.display = '';
+                        }else{
+                            data.style.display = 'none';
+                        }
+                    })
+                }
+            }
         }
+        
+        
     </script>
 </body>
 </html>
