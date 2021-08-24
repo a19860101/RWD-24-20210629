@@ -17,6 +17,7 @@
         }
         .modal.active {
             display: block;
+            animation: fade-in 1s;
         }
         .modal-overlay {
             position: fixed;
@@ -32,9 +33,25 @@
             width: 60%;
             left: 50%;
             top: 50%;
-            transform: translate(-50%,-50%);
+            transform: translate(-50%,-100%);
             padding: 30px;
             border-radius: 15px;
+            opacity: 0;
+        }
+        .modal.active .modal-container {
+            animation:move-in 1s .2s forwards;
+        }
+        @keyframes fade-in {
+            from {opacity: 0;}
+        }
+        @keyframes move-in {
+            from {
+                transform: translate(-50%,-100%);
+            }
+            to {
+                transform: translate(-50%,-50%);
+                opacity: 1;
+            }
         }
     </style>
 </head>
