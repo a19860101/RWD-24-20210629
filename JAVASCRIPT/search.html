@@ -24,11 +24,22 @@
         <li>Latte</li>
     </ul>
     <script>
+        // let input = document.querySelector('#input');
+        // input.onkeyup = function(){
+        //     let li = document.querySelectorAll('li');
+        //     li.forEach(function(data){
+        //         if(data.textContent.indexOf(input.value) > -1){
+        //             data.style.display = '';
+        //         }else{
+        //             data.style.display = 'none';
+        //         }
+        //     })
+        // }
         let input = document.querySelector('#input');
         input.onkeyup = function(){
             let li = document.querySelectorAll('li');
             li.forEach(function(data){
-                if(data.textContent.indexOf(input.value) > -1){
+                if(data.textContent.toUpperCase().indexOf(input.value.toUpperCase()) > -1){
                     data.style.display = '';
                 }else{
                     data.style.display = 'none';
