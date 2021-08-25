@@ -8,16 +8,14 @@
 </head>
 <body>
     <script>
-        let url = 'data.json';
+        let url = 'https://jsonplaceholder.typicode.com/users';
         fetch(url)
         .then(function(response){
             return response.json();
         })
         .then(function(data){
-            // console.log(data);
+            console.log(data);
             data.forEach(function(d){
-                console.log(d.name);
-                console.log(d.mail);
             })
         })
     </script>  
