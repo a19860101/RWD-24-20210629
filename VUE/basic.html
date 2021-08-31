@@ -24,12 +24,14 @@
                 <span v-else style="color:green">{{drink.name}}</span>
             </div>
         </div>
+        <div>{{num > 0 ? '正':'負'}}</div>
     </div>
     <script>
         Vue.createApp({
             data() {
                 return {
                     title: 'Hello VUE!!!',
+                    num: -10,
                     foods: ['滷肉飯', '牛肉麵', '肉圓', '臭豆腐', '豆花'],
                     drinks: [
                         {
