@@ -19,7 +19,9 @@
         </div>
         <div>
             <div v-for="drink in drinks">
-                {{drink.name}} ${{drink.price}}
+                <span v-if="drink.price > 50" style="color:cyan">{{drink.name}}</span>
+                <span v-else-if="drink.price > 40" style="color:crimson">{{drink.name}}</span>
+                <span v-else style="color:green">{{drink.name}}</span>
             </div>
         </div>
     </div>
@@ -49,6 +51,10 @@
                             id: 4,
                             name: '拿鐵',
                             price: 60
+                        },{
+                            id:5,
+                            name:'冬瓜茶',
+                            price: 30  
                         }
                     ]
                 }
