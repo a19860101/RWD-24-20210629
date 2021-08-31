@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{title}}</h1>
+        <div>
+            <div v-for="food in foods">{{food}}</div>
+            <div v-for="food of foods">{{food}}</div>
+        </div>
+        <div>
+            <div v-for="drink in drinks">
+                {{drink.name}} ${{drink.price}}
+            </div>
+        </div>
+    </div>
+    <script>
+        Vue.createApp({
+            data() {
+                return {
+                    title: 'Hello VUE!!!',
+                    foods: ['滷肉飯', '牛肉麵', '肉圓', '臭豆腐', '豆花'],
+                    drinks: [
+                        {
+                            id: 1,
+                            name: '珍珠奶茶',
+                            price: 50
+                        },
+                        {
+                            id: 2,
+                            name: '柳橙綠茶',
+                            price: 55
+                        },
+                        {
+                            id: 3,
+                            name: '冰淇淋紅茶',
+                            price: 40
+                        },
+                        {
+                            id: 4,
+                            name: '拿鐵',
+                            price: 60
+                        }
+                    ]
+                }
+            }
+        }).mount('#app');
+    </script>
+</body>
+
+</html>
