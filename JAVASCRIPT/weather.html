@@ -35,16 +35,50 @@
 <body>
     <select name="" id="city">
         <option>--請選擇--</option>
-        <option value="Taipei">台北</option>
+        <!-- <option value="Taipei">台北</option>
         <option value="Tokyo">東京</option>
         <option value="Seoul">首爾</option>
         <option value="Bangkok">曼谷</option>
-        <option value="Singapore">新加坡</option>
+        <option value="Singapore">新加坡</option> -->
     </select>
     <div class="container">
     </div>
     <!-- b1ecbccd638b763d489602917ba47cc3 -->
     <script>
+        let cities = [
+            {
+                name:'台北',
+                value:'Taipei'
+            },
+            {
+                name:'東京',
+                value:'Tokyo'
+            },
+            {
+                name:'首爾',
+                value:'Seoul'
+            },
+            {
+                name:'曼谷',
+                value:'Bangkok'
+            },
+            {
+                name:'新加坡',
+                value:'Singapore'
+            },
+            {
+                name:'巴西',
+                value: 'Brazil'
+            }
+        ];
+        cities.forEach(data=>{
+            let option = document.createElement('option');
+            option.value = data.value;
+            option.append(data.name)
+            document.querySelector('select').append(option);
+            
+        })
+
         document.querySelector('#city').onchange = e => {
             console.log(e.target.value);
             document.querySelector('.container').textContent = '';
