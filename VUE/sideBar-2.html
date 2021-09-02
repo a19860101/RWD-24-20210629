@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            font-family: 'Segoe UI';
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        .menu {
+            position: fixed;
+            background-color: #cecece;
+            width: 300px;
+            height: 100%;
+            top: 0;
+            right: 0;
+            transform: translateX(100%);
+            transition: .4s;
+        }
+        .menu.active {
+            transform: translateX(0);
+        }
+        .menu a {
+            display: block;
+            padding: 15px;
+            border-bottom: 1px solid #aaa;
+        }
+        .openMenu {
+            width: 50px;
+            height: 50px;
+            display: block;
+            background-color: #aaa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            position: absolute;
+            right: 100%;
+        }
+        .closeMenu {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <nav>
+            <div class="menu" :class="{active: isOpen}">
+                <a href="#" class="openMenu" v-on:click="toggleMenu()"><i class="fas fa-bars fa-lg"></i></a>
+                <ul>
+                    <li><a href="#">link 1</a></li>
+                    <li><a href="#">link 2</a></li>
+                    <li><a href="#">link 3</a></li>
+                    <li><a href="#">link 4</a></li>
+                    <li><a href="#">link 5</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <script>
+        Vue.createApp({
+            data(){
+                return {
+                    isOpen: false
+                }
+            },
+            methods:{
+                toggleMenu(){
+                    this.isOpen = !this.isOpen
+                },
+
+            }
+        }).mount('#app')
+    </script>
+</body>
+</html>
