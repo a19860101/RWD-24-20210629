@@ -17,12 +17,67 @@
             padding: 0;
             margin: 0;
         }
+        nav {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #222;
+        }
+        nav a {
+            color: #fff;
+            display: block;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .container {
+            width: 1000px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .box {
+            flex:0 0 calc(100% / 3);
+            padding: 15px;
+        }
+        .content {
+            border: 1px solid #bbb;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        img {
+            width: 100%;
+            display: block;
+        }
+        .product-info {
+            padding: 15px;
+        }
+        .addToCart {
+            text-align: right;
+            display: block;
+        }
     </style>
 </head>
 
 <body>
     <div id="app">
-        {{products}}
+        <nav>
+            <a href="#">LOGO</a>
+            <a href="#"><i class="fas fa-shopping-cart fa-lg"></i></a>
+        </nav>
+        <div class="container">
+            <div class="box" v-for="product in products">
+                <div class="content">
+                    <img :src="`images/${product.img}`" alt="">
+                    <div class="product-info">
+                        <div>{{product.name}} {{product.colorName}}</div>
+                        <div>NT${{product.price}}</div>
+                        <a href="#" class="addToCart">加入購物車</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <script>
         const shirts = [
@@ -32,7 +87,8 @@
                 colorName: '黑色',
                 color: '#000',
                 img: '5341720_500.jpg',
-                qty: 1
+                qty: 1,
+                price: 299
             },
             {
                 id: 2,
@@ -40,7 +96,9 @@
                 colorName: '紫色',
                 color: 'purple',
                 img: '5341702_500.jpg',
-                qty: 23
+                qty: 23,
+                price: 299
+
             },
             {
                 id: 3,
@@ -48,7 +106,9 @@
                 colorName: '紅色',
                 color: '#f00',
                 img: '5341707_500.jpg',
-                qty: 14
+                qty: 14,
+                price: 299
+
             },
             {
                 id: 4,
@@ -56,7 +116,9 @@
                 colorName: '綠色',
                 color: 'green',
                 img: '5341716_500.jpg',
-                qty: 0
+                qty: 0,
+                price: 299
+
             },
             {
                 id: 5,
@@ -64,8 +126,19 @@
                 colorName: '黃色',
                 color: 'yellow',
                 img: '5341714_500.jpg',
-                qty: 9
+                qty: 9,
+                price: 299
+
             },
+            {
+                id:6,
+                name: 'STAR WARS系列輕型風衣外套',
+                colorName: '黑色',
+                color:'#000',
+                img:'5406901_500.jpg',
+                qty: 4,
+                price: 490
+            }
         ];
         Vue.createApp({
             data() {
