@@ -14,7 +14,8 @@
 </head>
 <body>
     <div id="app">
-        <button>click</button>
+        <button v-on:click="changeColor()">click</button>
+        <button v-on:click="isRed = !isRed">click2</button>
         <div :class="{red:isRed}">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, culpa recusandae corporis, corrupti eos accusamus consequuntur vero laboriosam ut ratione repudiandae temporibus quos sequi labore facere libero cupiditate harum inventore!
         </div>
@@ -24,6 +25,11 @@
             data(){
                 return {
                     isRed: false
+                }
+            },
+            methods:{
+                changeColor(){
+                    this.isRed = !this.isRed;
                 }
             }
         }).mount('#app');
