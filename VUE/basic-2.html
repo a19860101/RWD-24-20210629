@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <style>
+        .red {
+            color: #f00;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <button>click</button>
+        <div :class="{red:isRed}">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, culpa recusandae corporis, corrupti eos accusamus consequuntur vero laboriosam ut ratione repudiandae temporibus quos sequi labore facere libero cupiditate harum inventore!
+        </div>
+    </div>
+    <script>
+        Vue.createApp({
+            data(){
+                return {
+                    isRed: false
+                }
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>
