@@ -26,6 +26,10 @@
         </div>
         <div>{{num > 0 ? '正':'負'}}</div>
         <a v-bind:href="link">Yahoo</a>
+        <hr>
+        {{drinksName}}
+        <hr>
+        {{drinksPrice}}
     </div>
     <script>
         Vue.createApp({
@@ -61,6 +65,16 @@
                             price: 30  
                         }
                     ]
+                }
+            },
+            computed:{
+                drinksName(){
+                    return this.drinks.map(drink => drink.name);
+                },
+                drinksPrice(){
+                    return this.drinks.map(function(drink){
+                        return drink.price;
+                    });
                 }
             }
         }).mount('#app');
