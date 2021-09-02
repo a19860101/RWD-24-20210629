@@ -25,12 +25,14 @@
             </div>
         </div>
         <div>{{num > 0 ? '正':'負'}}</div>
+        <a v-bind:href="link">Yahoo</a>
     </div>
     <script>
         Vue.createApp({
             data() {
                 return {
                     title: 'Hello VUE!!!',
+                    link: 'https://tw.yahoo.com',
                     num: -10,
                     foods: ['滷肉飯', '牛肉麵', '肉圓', '臭豆腐', '豆花'],
                     drinks: [
