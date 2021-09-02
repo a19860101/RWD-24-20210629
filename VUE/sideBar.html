@@ -28,6 +28,7 @@
             height: 100%;
             top: 0;
             transform: translateX(-100%);
+            transition: .4s;
         }
         .menu.active {
             transform: translateX(0);
@@ -46,14 +47,18 @@
             justify-content: center;
             align-items: center;
         }
+        .closeMenu {
+            text-align: right;
+        }
     </style>
 </head>
 <body>
     <div id="app">
         <nav>
-            <a href="#" class="openMenu"><i class="fas fa-bars fa-lg"></i></a>
-            <div class="menu">
+            <a href="#" class="openMenu" v-on:click="openMenu()"><i class="fas fa-bars fa-lg"></i></a>
+            <div class="menu" :class="{active: isOpen}">
                 <ul>
+                    <li><a href="#" class="closeMenu" @click="closeMenu()"><i class="fas fa-times-circle fa-lg"></i></a></li>
                     <li><a href="#">link 1</a></li>
                     <li><a href="#">link 2</a></li>
                     <li><a href="#">link 3</a></li>
@@ -63,5 +68,22 @@
             </div>
         </nav>
     </div>
+    <script>
+        Vue.createApp({
+            data(){
+                return {
+                    isOpen: false
+                }
+            },
+            methods:{
+                openMenu(){
+                    this.isOpen = true
+                },
+                closeMenu(){
+                    this.isOpen = false;
+                }
+            }
+        }).mount('#app')
+    </script>
 </body>
 </html>
