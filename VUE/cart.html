@@ -133,6 +133,9 @@
                     </div>
 
                 </div>
+                <template v-if="cartItems.length > 0">
+                    <a href="#" @click="cartItems.length = 0">清空購物車</a>
+                </template>
             </div>
         </div>
 
