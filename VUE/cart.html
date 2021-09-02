@@ -68,6 +68,9 @@
             transition: .5s;
             box-shadow: 1px 0px 10px rgba(0,0,0,0);
         }
+        .cart-body {
+            padding: 30px;
+        }
         .cart.active {
             transform: translateX(0%);
             box-shadow: 1px 0px 10px rgba(0,0,0,.2);
@@ -76,7 +79,7 @@
             width: 50px;
             height: 50px;
             display: block;
-            background-color: #eee;
+            background-color: #efefef;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -84,6 +87,16 @@
             position: absolute;
             right: 100%;
             cursor: pointer
+        }
+        .cart-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .cart-item img {
+            display: block;
+            width: 70px;
+            margin-right: 5px;
         }
     </style>
 </head>
@@ -95,13 +108,13 @@
             <a href="#"><i class="fas fa-shopping-cart fa-lg"></i></a>
         </nav>
         <div class="container">
-            <div class="box" v-for="product in products">
+            <div class="box" v-for="(product,idx) in products">
                 <div class="content">
                     <img :src="`images/${product.img}`" alt="">
                     <div class="product-info">
                         <div>{{product.name}} {{product.colorName}}</div>
                         <div>NT${{product.price}}</div>
-                        <a href="#" class="addToCart">加入購物車</a>
+                        <a href="#" class="addToCart" @click="addToCart(idx)">加入購物車</a>
                     </div>
                 </div>
             </div>
@@ -111,9 +124,18 @@
                 <i class="fas fa-shopping-cart fa-lg"></i>
             </div>
             <div class="cart-body">
+                <div class="cart-item" v-for="(item,idx) in cartItems">
+                    <img :src="`images/${item.img}`">
+                    <div>
+                        {{item.name}} {{item.colorName}}
+                        <br>
+                        NT${{item.price}}
+                    </div>
 
+                </div>
             </div>
         </div>
+
     </div>
     <script>
         const shirts = [
@@ -180,7 +202,14 @@
             data() {
                 return {
                     products: shirts,
-                    isOpen: false
+                    isOpen: false,
+                    cartItems:[]
+                }
+            },
+            methods:{
+                addToCart(idx){
+                    console.log(idx);
+                    this.cartItems.push(this.products[idx]);
                 }
             }
         }).mount('#app');
