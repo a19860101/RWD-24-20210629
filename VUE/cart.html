@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            font-family: 'Segoe UI';
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        {{products}}
+    </div>
+    <script>
+        const shirts = [
+            {
+                id: 1,
+                name: '純棉網眼抽縐polo衫',
+                colorName: '黑色',
+                color: '#000',
+                img: '5341720_500.jpg',
+                qty: 1
+            },
+            {
+                id: 2,
+                name: '純棉網眼抽縐polo衫',
+                colorName: '紫色',
+                color: 'purple',
+                img: '5341702_500.jpg',
+                qty: 23
+            },
+            {
+                id: 3,
+                name: '純棉網眼抽縐polo衫',
+                colorName: '紅色',
+                color: '#f00',
+                img: '5341707_500.jpg',
+                qty: 14
+            },
+            {
+                id: 4,
+                name: '純棉網眼抽縐polo衫',
+                colorName: '綠色',
+                color: 'green',
+                img: '5341716_500.jpg',
+                qty: 0
+            },
+            {
+                id: 5,
+                name: '純棉網眼抽縐polo衫',
+                colorName: '黃色',
+                color: 'yellow',
+                img: '5341714_500.jpg',
+                qty: 9
+            },
+        ];
+        Vue.createApp({
+            data() {
+                return {
+                    products: shirts
+                }
+            }
+        }).mount('#app');
+    </script>
+</body>
+
+</html>
