@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            font-family: 'Segoe UI';
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        nav {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #222;
+        }
+        nav a {
+            color: #fff;
+            display: block;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .container {
+            width: 1000px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .box {
+            flex:0 0 calc(100% / 3);
+            padding: 15px;
+        }
+        .content {
+            border: 1px solid #bbb;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        img {
+            width: 100%;
+            display: block;
+        }
+        .product-info {
+            padding: 15px;
+        }
+        .addToCart {
+            text-align: right;
+            display: block;
+        }
+        .cart {
+            width: 400px;
+            height: 100%;
+            position: fixed;
+            background-color: #fff;
+            right: 0;
+            top: 0;
+            transform: translateX(100%);
+            transition: .5s;
+            box-shadow: 1px 0px 10px rgba(0,0,0,0);
+        }
+        .cart-body {
+            padding: 30px;
+        }
+        .cart.active {
+            transform: translateX(0%);
+            box-shadow: 1px 0px 10px rgba(0,0,0,.2);
+        }
+        .cart-toggle {
+            width: 50px;
+            height: 50px;
+            display: block;
+            background-color: #efefef;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            position: absolute;
+            right: 100%;
+            cursor: pointer
+        }
+        .cart-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            justify-content: space-between;
+        }
+        .cart-item img {
+            display: block;
+            width: 70px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        {{priceArray}}
+
+        <nav>
+            <a href="#">LOGO</a>
+            <a href="#"><i class="fas fa-shopping-cart fa-lg"></i></a>
+        </nav>
+        <div class="container">
+            <div class="box" v-for="(product,idx) in products">
+                <div class="content">
+                    <img :src="product.image" alt="">
+                    <div class="product-info">
+                        <div>{{product.title}}</div>
+                        <div>US${{product.price}}</div>
+                        <a href="#" class="addToCart" @click="addToCart(idx)">加入購物車</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart" :class="{active:isOpen}">
+            <div class="cart-toggle" @click="isOpen = !isOpen">
+                <i class="fas fa-shopping-cart fa-lg"></i>
+            </div>
+            <div class="cart-body">
+                <h3>購物車</h3>
+                <div class="cart-item" v-for="(item,idx) in cartItems">
+                    <img :src="item.image">
+                    <div>
+                        {{item.name}}
+                        <br>
+                        US${{item.price}}
+                    </div>
+                    <a href="#" @click="removeCart(idx)">移除</a>
+                </div>
+                <div v-if="cartItems == 0">
+                    空的喔
+                </div>
+                <div v-else>
+                    小計 US${{total}}
+                </div>
+                <template v-if="cartItems.length > 0">
+                    <a href="#" @click="cartItems.length = 0">清空購物車</a>
+                </template>
+            </div>
+        </div>
+    </div>
+    <script>
+        
+        Vue.createApp({
+            data() {
+                return {
+                    products:[],
+                    isOpen: false,
+                    cartItems:[]
+                }
+            },
+            methods:{
+                addToCart(idx){
+                    console.log(idx);
+                    this.cartItems.push(this.products[idx]);
+                },
+                removeCart(idx){
+                    this.cartItems.splice(idx,1);
+                }
+            },
+            computed:{
+                total(){
+                    if(this.cartItems.length > 0){
+                        return this.cartItems.map(data=>data.price).reduce((a,b)=>a+b);
+                    }else{
+                        return 0;
+                    }
+                }
+
+            },
+            created(){
+                let url = 'https://fakestoreapi.com/products';
+                fetch(url)
+                .then(res=>res.json())
+                .then(data=>{
+                    console.log(data);
+                    this.products = data;
+                })
+
+            }
+        }).mount('#app');
+    </script>
+</body>
+
+</html>
