@@ -6,18 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://unpkg.com/vue@next"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js" integrity="sha512-lTLt+W7MrmDfKam+r3D2LURu0F47a3QaW5nF0c6Hl0JDZ57ruei+ovbg7BrZ+0bjVJ5YgzsAWE+RreERbpPE1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
     <div id="app">
-        <select name="" id="city" @change="changeCity()" v-model="city">
+        <select name="" id="city" v-model="city">
             <template v-for="city in cities">
                 <option :value="city">{{city}}</option>
             </template>
         </select>
         <h2>{{city}}</h2>
         <div v-for="data in datas">
-            <!-- <template v-if="data.County == city">
+            <template v-if="data.County == city">
                 <div>{{data.County}}</div>
                 <div>{{data.SiteName}}</div>
                 <div>一氧化氮{{data.NO}}</div>
@@ -26,8 +26,7 @@
                 <div>懸浮粒子PM2.5{{data['PM2.5']}}</div>
                 <div>二氧化硫{{data.SO2}}</div>
                 <hr>
-            </template> -->
-            {{results}}
+            </template>
         </div>
     </div>
     <script>
@@ -35,12 +34,7 @@
             data(){
                 return{
                     datas:[],
-                    city:'台北市',
-                }
-            },
-            methods:{
-                changeCity(){
-                    console.log(this.city);
+                    city:'',
                 }
             },
             computed:{
@@ -48,22 +42,27 @@
                     let c = this.datas.map(data => data.County);
                     // console.log(new Set(c));
                     // console.log(Array.from(new Set(c)));
-                    console.log([...new Set(c)]);
+                    // console.log([...new Set(c)]);
                     return [...new Set(c)];
                 },
                 results(){
-                    let r =  this.datas.filter(data=>data);
-                    return r;
-                }
+                    // let r =  this.datas.filter(data=>data.County == this.city);
+                    // return r; 
+                    return  this.datas.filter(data=>data.County == this.city);
+                    console.log(r);
+                },
 
             },
             created(){
                 let url = 'https://data.epa.gov.tw/api/v1/aqx_p_432?limit=1000&api_key=9be7b239-557b-4c10-9775-78cadfc555e9&sort=ImportDate%20desc&format=json';
-                fetch(url)
-                .then(res=>res.json())
-                .then(data=>{
-                    console.log(data);
-                    this.datas = data.records;
+                // fetch(url)
+                // .then(res=>res.json())
+                // .then(data=>{
+                //     this.datas = data.records;
+                // })
+                axios(url)
+                .then(res => {
+                    this.datas = res.data.records;
                 })
             }
         }).mount('#app');
