@@ -27,6 +27,7 @@
                 <div>二氧化硫{{data.SO2}}</div>
                 <hr>
             </template>
+            {{results}}
         </div>
     </div>
     <script>
@@ -46,9 +47,11 @@
                     return [...new Set(c)];
                 },
                 results(){
-                    // let r =  this.datas.filter(data=>data.County == this.city);
-                    // return r; 
-                    return  this.datas.filter(data=>data.County == this.city);
+                    let r =  this.datas.filter(data=>{
+                        return data;
+                    });
+                    return [...r]; 
+                    // return  this.datas.filter(data=>data.County == this.city);
                     console.log(r);
                 },
 
