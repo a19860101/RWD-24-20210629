@@ -6,12 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+    <style>
+        .active {
+            color: #fa0;
+        }
+    </style>
 </head>
 <body>
     <h1>title</h1>
     <p class="content">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum consequuntur ex velit pariatur dignissimos. Adipisci, atque reiciendis! Natus modi provident voluptatem quae quidem nam iusto ex pariatur, quisquam repudiandae facere?
     </p>
+    <a href="#" class='add'>add</a>
+    <a href="#" class='remove'>remove</a>
     <script>
         $('h1').css({
             color: 'red',
@@ -19,6 +26,12 @@
         });
         $('.content').hide();
         $('.content').show();
+        $('.add').click(function(){
+            $('.content').addClass('active');
+        });
+        $('.remove').click(function(){
+            $('.content').removeClass('active');
+        })
     </script>
 </body>
 </html>
