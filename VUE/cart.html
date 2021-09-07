@@ -127,6 +127,7 @@
                 <i class="fas fa-shopping-cart fa-lg"></i>
             </div>
             <div class="cart-body">
+                <h3>購物車</h3>
                 <div class="cart-item" v-for="(item,idx) in cartItems">
                     <img :src="`images/${item.img}`">
                     <div>
@@ -136,8 +137,11 @@
                     </div>
                     <a href="#" @click="removeCart(idx)">移除</a>
                 </div>
-                <div>
-                    小計 {{total}}
+                <div v-if="cartItems == 0">
+                    空的喔
+                </div>
+                <div v-else>
+                    小計 NT${{total}}
                 </div>
                 <template v-if="cartItems.length > 0">
                     <a href="#" @click="cartItems.length = 0">清空購物車</a>
