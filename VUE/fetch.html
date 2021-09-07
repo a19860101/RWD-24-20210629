@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+
+</head>
+<body>
+    <div id="app">
+        <div v-for="data in datas">
+            <div>{{data.County}}</div>
+            <div>{{data.SiteName}}</div>
+            <div>一氧化氮{{data.NO}}</div>
+            <div>二氧化氮{{data.NO2}}</div>
+            <div>臭氧{{data.O3}}</div>
+            <div>懸浮粒子PM2.5{{data['PM2.5']}}</div>
+            <div>二氧化硫{{data.SO2}}</div>
+            <hr>
+        </div>
+    </div>
+    <script>
+        Vue.createApp({
+            data(){
+                return{
+                    datas:[]
+                }
+            },
+            created(){
+                let url = 'https://data.epa.gov.tw/api/v1/aqx_p_432?limit=1000&api_key=9be7b239-557b-4c10-9775-78cadfc555e9&sort=ImportDate%20desc&format=json';
+                fetch(url)
+                .then(res=>res.json())
+                .then(data=>{
+                    console.log(data);
+                    this.datas = data.records;
+                })
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>
