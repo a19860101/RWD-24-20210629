@@ -15,7 +15,7 @@
                 <option :value="city">{{city}}</option>
             </template>
         </select>
-        <!-- <h2>{{city}}</h2> -->
+        <h2>{{city}}</h2>
         <!-- <div v-for="data in datas">
             <div>{{data.County}}</div>
             <div>{{data.SiteName}}</div>
@@ -26,14 +26,13 @@
             <div>二氧化硫{{data.SO2}}</div>
             <hr>
         </div> -->
-        {{cities}}
     </div>
     <script>
         Vue.createApp({
             data(){
                 return{
                     datas:[],
-                    // city:'',
+                    city:'',
                 }
             },
             methods:{
@@ -43,8 +42,13 @@
             },
             computed:{
                 cities(){
-                    return this.datas.map(data => data.County);
+                    let c = this.datas.map(data => data.County);
+                    // console.log(new Set(c));
+                    // console.log(Array.from(new Set(c)));
+                    console.log([...new Set(c)]);
+                    return [...new Set(c)];
                 }
+
             },
             created(){
                 let url = 'https://data.epa.gov.tw/api/v1/aqx_p_432?limit=1000&api_key=9be7b239-557b-4c10-9775-78cadfc555e9&sort=ImportDate%20desc&format=json';
