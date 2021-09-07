@@ -92,6 +92,7 @@
             display: flex;
             align-items: center;
             margin-bottom: 15px;
+            justify-content: space-between;
         }
         .cart-item img {
             display: block;
@@ -131,7 +132,7 @@
                         <br>
                         NT${{item.price}}
                     </div>
-
+                    <a href="#" @click="removeCart(idx)">移除</a>
                 </div>
                 <template v-if="cartItems.length > 0">
                     <a href="#" @click="cartItems.length = 0">清空購物車</a>
@@ -213,6 +214,9 @@
                 addToCart(idx){
                     console.log(idx);
                     this.cartItems.push(this.products[idx]);
+                },
+                removeCart(idx){
+                    this.cartItems.splice(idx,1);
                 }
             }
         }).mount('#app');
