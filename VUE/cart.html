@@ -104,6 +104,8 @@
 
 <body>
     <div id="app">
+        {{priceArray}}
+
         <nav>
             <a href="#">LOGO</a>
             <a href="#"><i class="fas fa-shopping-cart fa-lg"></i></a>
@@ -134,12 +136,14 @@
                     </div>
                     <a href="#" @click="removeCart(idx)">移除</a>
                 </div>
+                <div>
+                    小計 {{total}}
+                </div>
                 <template v-if="cartItems.length > 0">
                     <a href="#" @click="cartItems.length = 0">清空購物車</a>
                 </template>
             </div>
         </div>
-
     </div>
     <script>
         const shirts = [
@@ -218,6 +222,26 @@
                 removeCart(idx){
                     this.cartItems.splice(idx,1);
                 }
+            },
+            computed:{
+                // priceArray(){
+                //     return this.cartItems.map(data=>data.price);
+                // },
+                // total(){
+                //     if(this.cartItems.length > 0){
+                //         return this.priceArray.reduce((a,b)=>a+b);
+                //     }else{
+                //         return 0;
+                //     }
+                // }
+                total(){
+                    if(this.cartItems.length > 0){
+                        return this.cartItems.map(data=>data.price).reduce((a,b)=>a+b);
+                    }else{
+                        return 0;
+                    }
+                }
+
             }
         }).mount('#app');
     </script>
