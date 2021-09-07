@@ -16,16 +16,18 @@
             </template>
         </select>
         <h2>{{city}}</h2>
-        <!-- <div v-for="data in datas">
-            <div>{{data.County}}</div>
-            <div>{{data.SiteName}}</div>
-            <div>一氧化氮{{data.NO}}</div>
-            <div>二氧化氮{{data.NO2}}</div>
-            <div>臭氧{{data.O3}}</div>
-            <div>懸浮粒子PM2.5{{data['PM2.5']}}</div>
-            <div>二氧化硫{{data.SO2}}</div>
-            <hr>
-        </div> -->
+        <div v-for="data in datas">
+            <template v-if="data.County == city">
+                <div>{{data.County}}</div>
+                <div>{{data.SiteName}}</div>
+                <div>一氧化氮{{data.NO}}</div>
+                <div>二氧化氮{{data.NO2}}</div>
+                <div>臭氧{{data.O3}}</div>
+                <div>懸浮粒子PM2.5{{data['PM2.5']}}</div>
+                <div>二氧化硫{{data.SO2}}</div>
+                <hr>
+            </template>
+        </div>
     </div>
     <script>
         Vue.createApp({
