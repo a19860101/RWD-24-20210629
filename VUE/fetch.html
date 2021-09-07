@@ -10,6 +10,12 @@
 </head>
 <body>
     <div id="app">
+        <select name="" id="city" @change="changeCity()" v-model="city">
+            <option value="新北市">新北市</option>
+            <option value="桃園市">桃園市</option>
+            <option value="新竹市">新竹市</option>
+        </select>
+        <h2>{{city}}</h2>
         <div v-for="data in datas">
             <div>{{data.County}}</div>
             <div>{{data.SiteName}}</div>
@@ -25,7 +31,13 @@
         Vue.createApp({
             data(){
                 return{
-                    datas:[]
+                    datas:[],
+                    city:'',
+                }
+            },
+            methods:{
+                changeCity(){
+                    console.log(this.city);
                 }
             },
             created(){

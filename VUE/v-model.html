@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="input">
+        <div>
+            {{input}}
+        </div>
+        <select name="" id="" v-model="city">
+            <option value="新北市">新北市</option>
+            <option value="台北市">台北市</option>
+            <option value="桃園市">桃園市</option>
+            <option value="新竹市">新竹市</option>
+        </select>
+        <div>
+            {{city}}
+        </div>
+    </div>
+    <script>
+        Vue.createApp({
+            data(){
+                return{
+                    input:'hello world',
+                    city:'',
+                }
+            }
+        }).mount('#app')
+    </script>
+</body>
+</html>
