@@ -95,6 +95,21 @@
                     scrollTop:h
                 },speed);
             })
+            $('#gotop').click(function(){
+                $('html,body').animate({
+                    scrollTop: 0
+                });
+            })
+            $('#gotop').hide();
+            $(window).scroll(function(){
+                let h = $(window).scrollTop();
+                console.log(h);
+                if(h > 600){
+                    $('#gotop').fadeIn();
+                }else{
+                    $('#gotop').fadeOut();
+                }
+            });
         })
     </script>
 </body>
