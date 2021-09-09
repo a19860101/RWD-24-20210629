@@ -16,7 +16,7 @@
             </template>
         </select>
         <h2>{{city}}</h2>
-        <div v-for="data in datas">
+        <!-- <div v-for="data in datas">
             <template v-if="data.County == city">
                 <div>{{data.County}}</div>
                 <div>{{data.SiteName}}</div>
@@ -27,7 +27,16 @@
                 <div>二氧化硫{{data.SO2}}</div>
                 <hr>
             </template>
-            {{results}}
+        </div> -->
+        <div v-for="result in results">
+            <div>{{result.County}}</div>
+            <div>{{result.SiteName}}</div>
+            <div>一氧化氮{{result.NO}}</div>
+            <div>二氧化氮{{result.NO2}}</div>
+            <div>臭氧{{result.O3}}</div>
+            <div>懸浮粒子PM2.5{{result['PM2.5']}}</div>
+            <div>二氧化硫{{result.SO2}}</div>
+            <hr>
         </div>
     </div>
     <script>
@@ -47,12 +56,12 @@
                     return [...new Set(c)];
                 },
                 results(){
-                    let r =  this.datas.filter(data=>{
-                        return data;
-                    });
-                    return [...r]; 
-                    // return  this.datas.filter(data=>data.County == this.city);
-                    console.log(r);
+                    // let r =  this.datas.filter(data=>{
+                    //     return data.County == this.city;
+                    // });
+                    // return r;
+                    return this.datas.filter(data=>data.County == this.city);
+                    
                 },
 
             },

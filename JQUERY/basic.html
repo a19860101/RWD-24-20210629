@@ -7,8 +7,13 @@
     <title>Document</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
     <style>
+        .content {
+            transition: .6s;
+        }
         .active {
-            color: #fa0;
+            color: #a50000;
+            background-color: #ccc;
+            padding: 15px;
         }
     </style>
 </head>
@@ -19,6 +24,7 @@
     </p>
     <a href="#" class='add'>add</a>
     <a href="#" class='remove'>remove</a>
+    <a href="#" class="toggle">Toggle</a>
     <script>
         $('h1').css({
             color: 'red',
@@ -31,6 +37,9 @@
         });
         $('.remove').click(function(){
             $('.content').removeClass('active');
+        })
+        $('.toggle').click(function(){
+            $('.content').toggleClass('active');
         })
     </script>
 </body>
