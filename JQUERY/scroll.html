@@ -94,11 +94,17 @@
                 $('html,body').animate({
                     scrollTop:h
                 },speed);
+
+                return false;
             })
-            $('#gotop').click(function(){
+            $('#gotop').click(function(e){
+                let speed = 1000;
+                e.preventDefault();
                 $('html,body').animate({
                     scrollTop: 0
-                });
+                },speed);
+                // return false;
+                
             })
             $('#gotop').hide();
             $(window).scroll(function(){
