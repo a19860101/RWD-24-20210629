@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI';
+        }
+        .modal {
+            display: none;
+        }
+        .modal-overlay {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,.8);
+            left: 0;
+            top: 0;
+        }
+        .modal-container {
+            background-color: #fff;
+            position: absolute;
+            width: 60%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-100%);
+            padding: 30px;
+            border-radius: 15px;
+        }
+        
+    </style>
+</head>
+<body>
+    <a href="#" data-modal="#modal-1" class="modal-btn">modal 1</a>
+    <a href="#" data-modal="#modal-2" class="modal-btn">modal 2</a>
+    <div class="modal" id="modal-1">
+        <div class="modal-overlay modal-close"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3>Modal 1</h3>
+            </div>
+            <div class="modal-body">
+                <p>操作系統，進入簡體購買看起來剛剛，鐵路一句吃了通常設置那就詳細至於三個就好之家連接笑着註冊時間，浙江只見這時高中線路身體發揮去年出來走向證明最好，各類男人留學，說是告訴你收入，上了是怎麼目的年輕人，主席台北則是清晰億元騎士不斷分為認識，最後不論，事實上起。</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="modal-close">關閉</a>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="modal-2">
+        <div class="modal-overlay modal-close"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3>Modal 2</h3>
+            </div>
+            <div class="modal-body">
+                <p>操作系統，進入簡體購買看起來剛剛，鐵路一句吃了通常設置那就詳細至於三個就好之家連接笑着註冊時間，浙江只見這時高中線路身體發揮去年出來走向證明最好，各類男人留學，說是告訴你收入，上了是怎麼目的年輕人，主席台北則是清晰億元騎士不斷分為認識，最後不論，事實上起。</p>
+                <p>操作系統，進入簡體購買看起來剛剛，鐵路一句吃了通常設置那就詳細至於三個就好之家連接笑着註冊時間，浙江只見這時高中線路身體發揮去年出來走向證明最好，各類男人留學，說是告訴你收入，上了是怎麼目的年輕人，主席台北則是清晰億元騎士不斷分為認識，最後不論，事實上起。</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="modal-close">關閉</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $('.modal-btn').click(function(){
+                let modal = $(this).data('modal');
+                $(modal).fadeIn();
+            })
+            $('.modal-close').click(function(){
+                $('.modal').fadeOut();
+            })
+        })
+    </script>
+</body>
+</html>
