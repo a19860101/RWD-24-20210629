@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         * {
             margin: 0;
@@ -43,6 +44,22 @@
         #service {background-color: #EAFFD0;}
         #product {background-color: #FCE38A;}
         #contact {background-color: #95E1D3;}
+        #gotop {
+            display: block;
+            width: 50px;
+            height: 50px;
+            position: fixed;
+            right: 15px;
+            bottom: 15px;
+            background-color: #222;
+            color: #fff;
+            line-height: 43px;
+            text-align: center;
+            border-radius: 50%;
+        }
+        #gotop i {
+            vertical-align: middle;
+        }
     </style>
 </head>
 <body>
@@ -64,6 +81,9 @@
     <div id="contact" class="container">
         <h2>contact</h2>
     </div>
+    <a href="#" id="gotop">
+        <i class="fas fa-chevron-up fa-2x"></i>
+    </a>
     <script>
         $(function(){
             $('nav').find('a').click(function(){
