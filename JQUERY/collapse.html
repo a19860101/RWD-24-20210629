@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
     <style>
         * {
@@ -24,12 +25,28 @@
             padding: 8px;
             cursor: pointer;
             border-bottom: 1px solid #54436B;
+            transition: .3s;
+            position: relative;
         }
+        .title:hover ,.title.active {
+            background-color: #54436B;
+            color: #fff;
+        }
+       
         .content {
             background-color: #ACFFAD;
             padding: 15px;
             line-height: 1.75;
             display: none;
+        }
+        .icon {
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            transition: .6s;
+        }
+        .title.active .icon {
+            transform: rotate(180deg);
         }
     </style>
 </head>
@@ -48,20 +65,29 @@
         
     </script>
     <div class="container">
-        <h2 class="title">Title 1</h2>
+        <h2 class="title">
+            Title 1
+            <i class="fas fa-chevron-down icon"></i>
+        </h2>
         <div class="content">
             第二移動規定聲音彼此一番到處資訊你也，世界上人才加大是個夫妻規格微軟承擔開發講話點擊數，二人進口回到而來白色堅決頻道資格校長明白一笑筆記本，飯店就要方案生意，供應商主持在這裡案例列表已有智能本人關於檢查及其，一人感謝保護，路線把我排行榜謝謝動漫一起淡淡面。
         </div>
-        <h2 class="title">Title 2</h2>
+        <h2 class="title">Title 2
+            <i class="fas fa-chevron-down icon"></i>
+        </h2>
         <div class="content">
             金額部門感興趣如今存儲安排遠遠文化降價支持免費版，帶著因為電影最多好處幸福使用不管推坑王，紀念暴力網頁課程穩定市委一是生存初音典型現金婦女，她的相當數字咱們戰鬥執行時間本地負責人招聘，嚴格允許自從共享新人通用討論區，玄幻天然技能理解團體回頭，未知下載一些進行故事發佈晶片你不幾乎，英雄掌握警告，瞬間她說確保男女實踐經常內容超市再說訪問透露步驟不過，微微我是好看獲得解決方案，能不能也會回去全家，認定。
         </div>
-        <h2 class="title">Title 3</h2>
+        <h2 class="title">Title 3
+            <i class="fas fa-chevron-down icon"></i>
+        </h2>
         <div class="content">
             正式地下男子容量高級基於可能情形很快套件農民你還對話，溫州每頁我對工具但是，臺灣人台北電器很多事實究竟哪個想想，不行只好大師小遊戲求購能否藝術，信箱要去格式朋友改善此處語言放下地圖尷尬台鐵，請大家對她好多技術，實驗精采售價遠程指南就不哈哈回應門口，發表品質提出文章電子今年高手傢伙房東登記一起，預測。
 
         </div>
-        <h2 class="title">Title 4</h2>
+        <h2 class="title">Title 4
+            <i class="fas fa-chevron-down icon"></i>
+        </h2>
         <div class="content">
             無門畢竟教育活動，給我們半年是有審批將在三大，在我報價郵遞區號，給你很有詳細訊息壓縮高中動物此刻中文版，和你是在這是臉上內心現代衝突諮詢自身集體消除，容易不可以老公不斷，網際網路，幫忙強大德國，設備。
         </div>
@@ -75,6 +101,7 @@
         $(function(){
             $('.title').click(function(){
                 $(this).next().slideToggle();
+                $(this).toggleClass('active');
             })
         })
         $(function(){})
