@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI';
+        }
+        nav {
+            width: 100%;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            background-color: #222;
+            text-align: center;
+        }
+        nav a {
+            display: inline-block;
+            padding-left: 15px;
+            padding-right: 15px;
+            color: #fff;
+            text-decoration: none;
+        }
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        h2 {
+            font-size: 5em;
+            text-transform: uppercase;
+        }
+        #about {background-color: #FF75A0;}
+        #service {background-color: #EAFFD0;}
+        #product {background-color: #FCE38A;}
+        #contact {background-color: #95E1D3;}
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#">About</a>
+        <a href="#">Service</a>
+        <a href="#">Product</a>
+        <a href="#">Contact</a>
+    </nav>    
+    <div id="about" class="container">
+        <h2>About</h2>
+    </div>
+    <div id="service" class="container">
+        <h2>service</h2>
+    </div>
+    <div id="product" class="container">
+        <h2>product</h2>
+    </div>
+    <div id="contact" class="container">
+        <h2>contact</h2>
+    </div>
+</body>
+</html>
