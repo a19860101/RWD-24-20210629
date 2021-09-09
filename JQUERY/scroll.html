@@ -19,6 +19,7 @@
             padding-bottom: 15px;
             background-color: #222;
             text-align: center;
+            position: fixed;
         }
         nav a {
             display: inline-block;
@@ -66,9 +67,13 @@
     <script>
         $(function(){
             $('nav').find('a').click(function(){
+                let speed = 600;
                 let target = $(this).data('target');
                 let h = $(target).offset().top;
                 console.log(target,h);
+                $('html,body').animate({
+                    scrollTop:h
+                },speed);
             })
         })
     </script>
