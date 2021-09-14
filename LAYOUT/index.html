@@ -380,8 +380,27 @@
             </div>
         </div>
     </footer>
+    <a href="#" id="gotop"> <i class="fas fa-chevron-up fa-2x"></i></a>
     <script>
         new WOW().init();
+        $(function(){
+            $('#gotop').click(function(e){
+                let speed = 1000;
+                e.preventDefault();
+                $('html,body').animate({
+                    scrollTop: 0
+                },speed);
+            })
+            $(window).scroll(function(){
+                let h = $(window).scrollTop();
+                if(h > 600){
+                    $('#gotop').addClass('active');
+                }else{
+                    $('#gotop').removeClass('active');
+                }
+
+            })
+        })
     </script>
 </body>
 

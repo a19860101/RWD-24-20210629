@@ -124,3 +124,27 @@ nav {
         flex-direction: row;
     }
 }
+
+
+#gotop {
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    background-color: #222;
+    color: #fff;
+    line-height: 43px;
+    text-align: center;
+    border-radius: 50%;
+
+    transform: translateX(200%)rotate(180deg);
+    transition: .6s cubic-bezier(.55,.13,.56,1.74);
+}
+#gotop.active {
+    transform: translateX(0)rotate(0);
+}
+#gotop i {
+    vertical-align: middle;
+}
