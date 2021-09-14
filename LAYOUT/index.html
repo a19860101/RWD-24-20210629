@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <nav class="fixed bg-white w-100 d-flex justify-content-md-between align-items-md-center py-3">
+    <nav class="fixed w-100 d-flex justify-content-md-between align-items-md-center py-3">
         <a href="#" class="logo t-none t-dark mx-md-3 mx-2 t-weight" >unipapa</a>
         <div class="menu mr-auto d-none d-md-block">
             <a href="#" class="d-md-inline-block d-block t-none t-dark mx-lg-3 mx-2 my-3 my-md-0">居家清潔</a>
@@ -397,6 +397,13 @@
                     $('#gotop').addClass('active');
                 }else{
                     $('#gotop').removeClass('active');
+                }
+                if(h >150){
+                    $('nav').addClass('active');
+                    
+                }else{
+                    $('nav').removeClass('active');
+
                 }
 
             })
