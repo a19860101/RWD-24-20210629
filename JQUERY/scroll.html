@@ -87,7 +87,9 @@
         #gotop i {
             vertical-align: middle;
         }
-        
+        h2 {
+            background-color: #ccc;
+        }
     </style>
 </head>
 <body>
@@ -107,7 +109,7 @@
         </h2>
     </div>
     <div id="service" class="container">
-        <h2 class="wow fadeInLeft" data-wow-duration="1.5s">service</h2>
+        <h2 class="wow fadeInLeft" data-wow-offset="100" data-wow-duration="1.5s">service</h2>
     </div>
     <div id="product" class="container">
         <h2 class="wow heartBeat" data-wow-iteration="infinite">product</h2>
@@ -121,6 +123,7 @@
     <script>
         new WOW().init();
         $(function(){
+            
             $('nav').find('a').click(function(){
                 let speed = 600;
                 let target = $(this).data('target');
