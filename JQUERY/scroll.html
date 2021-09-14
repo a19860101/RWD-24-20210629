@@ -21,6 +21,20 @@
             background-color: #222;
             text-align: center;
             position: fixed;
+            transition: .5s;
+
+        }
+        nav.active{
+            background-color: #ffb81e;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        nav.active a {
+            color: #000;
+        }
+        nav.active a.active {
+            background-color: #8b02ad;
+            color: #fff;
         }
         nav a {
             display: inline-block;
@@ -127,9 +141,12 @@
                 if(h > 600){
                     // $('#gotop').fadeIn();
                     $('#gotop').addClass('active')
+                    $('nav').addClass('active');
                 }else{
                     // $('#gotop').fadeOut();
                     $('#gotop').removeClass('active')
+                    $('nav').removeClass('active');
+
                 }
                 $('nav').find('a').each(function(){
                     let target = $(this).data('target');
