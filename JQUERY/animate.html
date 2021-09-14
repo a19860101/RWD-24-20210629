@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.compat.min.css" integrity="sha512-b42SanD3pNHoihKwgABd18JUZ2g9j423/frxIP5/gtYgfBz/0nDHGdY/3hi+3JwhSckM3JLklQ/T6tJmV7mZEw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            height: 300px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            margin: auto;
+            background-color: #098;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box animated fadeInUp"></div>
+        <div class="box animated fadeInUp delay-1s"></div>
+        <div class="box animated fadeInUp delay-2s"></div>
+        <div class="box animated fadeInUp delay-3s"></div>
+        <div class="box animated fadeInUp delay-4s"></div>
+        <div class="box animated fadeInUp delay-5s"></div>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="box animated bounceIn slower"></div>
+        <div class="box animated bounceIn slow"></div>
+        <div class="box animated bounceIn fast"></div>
+        <div class="box animated bounceIn faster"></div>
+
+    </div>
+    <!-- 
+        次數:repeat-1,repeat-2,repeat-3,infinite
+        速度: slower,slow,fast,faster
+
+     -->
+</body>
+</html>
