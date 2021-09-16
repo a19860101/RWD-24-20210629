@@ -18,10 +18,21 @@
             margin: auto;
         }
         .product {
-            margin: 15px;
+            margin: 5px;
         }
         .slick-next:before, .slick-prev:before {
             color: #000;
+        }
+        .slick-slide {
+            transform:scale(.7);
+            filter:grayscale();
+            opacity: .6;
+            transition: .5s;
+        }
+        .slick-slide.slick-center {
+            transform: scale(1);
+            opacity: 1;
+            filter:none;
         }
     </style>
 </head>
@@ -91,9 +102,11 @@
             $('.products').slick({
                 dots: true,
                 arrows:  true,
-                slidesToShow:4,
+                slidesToShow:3,
                 slidesToScroll: 4,
-                speed: 1500
+                speed: 800,
+                centerMode: true,
+                centerPadding:'180px'
             })
         })
     </script>
