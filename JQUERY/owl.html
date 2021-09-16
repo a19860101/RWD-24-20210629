@@ -22,8 +22,28 @@
     </style>
     <script>
         $(function(){
-            $('#banner').owlCarousel();
-            $('.products').owlCarousel();
+            $('#banner').owlCarousel({
+                items:1,
+                autoplay: true,
+                loop:true,
+                autoplayTimeout: 5000,
+                autoplaySpeed:1000,
+                dots: true,
+                dotsSpeed: 1000,
+                nav: true,
+                navSpeed: 1000
+
+            });
+            $('.products').owlCarousel({
+                items:5,
+                margin: 15,
+                center: true,
+                loop: true,
+                autoplay: true,
+                autoplaySpeed:600,
+                dotsSpeed:600,
+                navSpeed:600,
+            });
         })
     </script>
 </head>
