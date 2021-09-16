@@ -17,11 +17,11 @@
             width: 1200px;
             margin: auto;
         }
-        body {
-            background-color: #e04;
-        }
         .product {
             margin: 15px;
+        }
+        .slick-next:before, .slick-prev:before {
+            color: #000;
         }
     </style>
 </head>
@@ -83,14 +83,17 @@
         $(function(){
             $('#banner').slick({
                 autoplay: true,
-                dots: true,
-                arrows: true,
+                autoplaySpeed:3000,
+                dots: false,
+                arrows: false,
+                speed: 2000
             });
             $('.products').slick({
                 dots: true,
                 arrows:  true,
                 slidesToShow:4,
-                slidesToScroll: 4
+                slidesToScroll: 4,
+                speed: 1500
             })
         })
     </script>
