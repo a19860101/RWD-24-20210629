@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.green.min.css" integrity="sha512-C8Movfk6DU/H5PzarG0+Dv9MA9IZzvmQpO/3cIlGIflmtY3vIud07myMu4M/NTPJl8jmZtt/4mC9bAioMZBBdA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         img {
             width: 100%;
@@ -18,6 +19,13 @@
         .products {
             max-width: 1200px;
             margin: auto;
+        }
+        .owl-item {
+            transform: scale(.6)!important;
+            transition: .6s;
+        }
+        .owl-item.center {
+            transform: scale(1)!important;
         }
     </style>
     <script>
@@ -35,19 +43,42 @@
 
             });
             $('.products').owlCarousel({
-                items:5,
+                items:1,
                 margin: 15,
                 center: true,
                 loop: true,
-                autoplay: true,
+                autoplay: false,
                 autoplaySpeed:600,
                 dotsSpeed:600,
                 navSpeed:600,
+                nav:true,
+                navText: ['<i class="fas fa-chevron-circle-left fa-2x"></i>','<i class="fas fa-chevron-circle-right fa-2x"></i>'],
+                responsive:{
+        
+                    600:{
+                        items:4,
+                    },
+                    1200:{
+                        items:4
+                    }
+                }
             });
         })
     </script>
 </head>
 <body>
+    <!-- 
+        優點
+        center模式較好用
+        結構較簡易
+        rwd較好控制
+
+        缺點
+        多張照片顯示時，沒有辦法設定單張滑動；若要單張滑動要啟動center或nav
+        nav預設樣式很醜
+
+
+     -->
     <div id="banner" class="owl-carousel owl-theme">
         <div class="item">
             <img src="https://picsum.photos/id/22/1600/600" alt="">
